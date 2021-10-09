@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+}
+
+.fas.fa-star {
+  color: rgb(255, 115, 0);
+}
+
+.fas.fa-euro-sign {
+  color:rgb(9, 81, 139);
+}
+.fas.fa-biking{
+  color:rgb(151, 10, 10);
+}
+.fas.fa-clock{
+  color:rgb(0, 179, 140);
+}
+.fas.fa-heart{
+  color:rgb(230, 0, 0);
+}

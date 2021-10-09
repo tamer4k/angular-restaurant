@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "restaurantName": "BackWERK",
+    "starRating": 3.2,
+    "categories": "Lunch, Snacks, Sandwiches",
+    "tijdBezorgd": 20,
+    "bezorgdKosten": 2.5,
+    "minBestellen": 10.25,
+    "soort": 1,
+    "favoriet": false,
+    "restaurantImageUrl": "assets/oo.jpg",
+    "category": [{
+      "id": 40,
+      "name": "Category 1"
+    },
+    {
+      "id": 42,
+      "name": "Category 2"
+    }]
+  },
+  {
+    "id": 2,
+    "restaurantName": "Eazie",
+    "starRating": 3.2,
+    "categories": "Italian style pizza, Greek, Gyros",
+    "tijdBezorgd": 25,
+    "bezorgdKosten": 3.5,
+    "minBestellen": 20.00,
+    "soort": 2,
+    "favoriet": true,
+    "restaurantImageUrl": "assets/oo.jpg"
+  },
+  {
+    "id": 3,
+    "restaurantName": "Gyrosstraat",
+    "starRating": 3.2,
+    "categories": "Sushi, Poke bowl, Japanese",
+    "tijdBezorgd": 15,
+    "bezorgdKosten": 0,
+    "minBestellen": 13.75,
+    "soort": 3,
+    "favoriet": false,
+    "restaurantImageUrl": "assets/oo.jpg"
+  },
+  {
+    "id": 4,
+    "restaurantName": "Happy Italy",
+    "starRating": 3.2,
+    "categories": "Salads, Lunch, Sandwiches",
+    "tijdBezorgd": 10,
+    "bezorgdKosten": 2,
+    "minBestellen": 7.25,
+    "soort": 1,
+    "favoriet": true,
+    "restaurantImageUrl": "assets/oo.jpg"
+  },
+  {
+    "id": 5,
+    "restaurantName": "WOKKi",
+    "starRating": 3.2,
+    "categories": "Burgers, Chicken, Fries",
+    "tijdBezorgd": 15,
+    "bezorgdKosten": 3.5,
+    "minBestellen": 18.80,
+    "soort": 1,
+    "favoriet": false,
+    "restaurantImageUrl": "assets/oo.jpg"
+  },
+  {
+    "id": 6,
+    "restaurantName": "Sumangali",
+    "starRating": 3.2,
+    "categories": "Lunch, Snacks, Sandwiches",
+    "tijdBezorgd": 20,
+    "bezorgdKosten": 4,
+    "minBestellen": 19.99,
+    "soort": 1,
+    "favoriet": true,
+    "restaurantImageUrl": "assets/oo.jpg"
+  }
+]

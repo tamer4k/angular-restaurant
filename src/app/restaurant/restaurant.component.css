@@ -1,0 +1,42 @@
+
+.box{
+  transition: 600ms;
+}
+.card-title{
+  font-weight: bold;
+}
+.card-categories{
+  font-weight: bold;
+  color: rgb(148, 148, 148);
+}
+.card-text{
+  text-align: left;
+  font-weight: bold;
+}
+i{
+  padding: 5px;
+  text-align: left;
+}
+.ng-star-inserted{
+  padding: 20px 5px;
+}
+.box:hover{
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(18, 18, 46, 0.431) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #ff7c00;
+  border: none;
+  width: -webkit-fill-available;
+}
+
+
+.heart {
+  padding: 20px 5px;
+  float: right;
+  margin-top: -20px;
+}
+
+
