@@ -22,10 +22,10 @@
 .mat-toolbar.mat-primary.mat-toolbar-single-row{
 
  /* background-image: url("https://www.lanser.com.au/wp-content/uploads/2019/07/Orange-Polygonal-background-01-HQ.jpg"); */
- background-color: coral;
+ background-color: #ff7c00;
 }
 .Snel-title{
-  background-color: coral;
+  background-color: #FFF;
 }
 
 
@@ -77,4 +77,30 @@ body {
 .white-mode:hover {
   background-color: #FFF;
   color: #122;
+}
+
+
+
+.sidenav{
+   background-color: #f5f5f5;
+
+
+}
+
+.mat-list-item{
+
+  border-bottom: solid 2px #FFF;
+
+}
+
+.mat-list-item.active,
+.mat-list-item:active{
+  border-left: solid 6px #ff7c00 !important;
+  background-color: #ececec;
+
+}
+.mat-list-base {
+  padding-top: 0px;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
 }

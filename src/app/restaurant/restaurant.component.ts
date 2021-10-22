@@ -2,46 +2,95 @@
 // import { DeclarationListEmitMode } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 // import { Route } from '@angular/router';
-import restaurantData  from '../restaurants.json';
+import restaurantData from '../restaurants.json';
 
+/**/
 
-
-interface Restaurant{
-    id: Number,
-    restaurantName: String,
-    starRating: Number,
-    categories: String,
-    tijdBezorgd: Number,
-    minBestellen: Number,
-    bezorgdKosten: Number,
-    soort: Number,
-    restaurantImageUrl: String,
-    favoriet: boolean,
+/* */
+declare let toastr: any
+interface Restaurant {
+  id: Number
+  restaurantName: String
+  starRating: Number
+  categories: String
+  tijdBezorgd: Number
+  minBestellen: Number
+  bezorgdKosten: Number
+  soort: Number
+  restaurantImageUrl: String
+  favoriet: boolean
+  openingstiden: String
+  cat?: Cat[]
 
 }
 
+export interface Cat {
+  catName?: string
+  producten?: Producten[]
+}
 
+export interface Producten {
+  id: number
+  name: string
+}
 
 
 @Component({
   selector: 'app-restaurant',
   templateUrl: './restaurant.component.html',
-  styleUrls: ['./restaurant.component.css']
+  styleUrls: ['./restaurant.component.css'],
+
 })
+
+
+
+
+
 export class RestaurantComponent implements OnInit {
+  constructor() { }
+  komma = ","
+  filteredRestaurants: Restaurant[] = [];
+  restaurants: Restaurant[] = restaurantData;
+  private _listFilter: string = '';
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredRestaurants = this.categoriesFilter(value);
+  }
+  categoriesFilter(filterBy: string): Restaurant[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.restaurants.filter((restaurant: Restaurant) =>
+      restaurant.categories.toLocaleLowerCase().includes(filterBy));
+  }
 
-  // constructor(private route:Route) {
-
-  //  }
-   constructor() {
-
+  filterFavoriet(): Restaurant[] {
+    return this.restaurants.filter((restaurant: Restaurant) => restaurant.favoriet === true);
   }
 
   ngOnInit(): void {
+    this.filteredRestaurants = this.restaurants;
+    this.listFilter = '';
+    debugger;
   }
-  restaurants: Restaurant[] = restaurantData;
-  // public clickMe(restaurant: Restaurant): void{
-  //   this.route.navigate(['/restaurants', restaurant.id], {state: {date: restaurant},})
-//     // history.state.data in de DeclarationListEmitMode.comp
-//   }
+  allValue(): void {
+    this.listFilter = '';
+  }
+  lunchValue(): void {
+    this.listFilter = 'lunch';
+  }
+  pizzaValue(): void {
+    this.listFilter = 'pizza';
+  }
+  japaneseValue(): void {
+    this.listFilter = 'japanese';
+  }
+  favorietValue(): void {
+    this.filteredRestaurants = this.filterFavoriet();
+
+  }
+
+
 }
+

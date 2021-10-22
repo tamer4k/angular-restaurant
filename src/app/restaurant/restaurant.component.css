@@ -1,6 +1,12 @@
 
 .box{
   transition: 600ms;
+  background-color: rgb(240, 240, 240);
+
+}
+.box:hover{
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(18, 18, 46, 0.431) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 5px;
 }
 .card-title{
   font-weight: bold;
@@ -20,18 +26,21 @@ i{
 .ng-star-inserted{
   padding: 20px 5px;
 }
-.box:hover{
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(18, 18, 46, 0.431) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  border-radius: 5px;
-}
 
-.btn-primary {
+
+.BestellenBtn {
   color: #fff;
-  background-color: #ff7c00;
+    border: none;
+  width: -webkit-fill-available;
+  transition: 1000ms;
+}
+.BestellenBtn:hover {
+  color: #fff;
+  background-color: #272727;
   border: none;
   width: -webkit-fill-available;
+  transition: 1000ms;
 }
-
 
 .heart {
   padding: 20px 5px;
@@ -40,3 +49,27 @@ i{
 }
 
 
+
+.btn.btn-dark.focus,
+.btn.btn-dark:focus {
+  color: #fff;
+  background-color: #ff7c00;
+  border-color: #252525;
+  outline: none;
+  box-shadow: rgba(87, 87, 87, 0.35) 0px 5px 15px;
+}
+
+.btn-outline-light.focus,
+.btn-outline-light:focus {
+  color: #fff;
+  background-color: #b31414;
+  border-color: #252525;
+  outline: none;
+  box-shadow: rgba(172, 4, 4, 0.589) 0px 5px 15px;
+}
+
+
+.text-info.ng-star-inserted{
+  display: inline;
+  padding: 0px !important;
+}

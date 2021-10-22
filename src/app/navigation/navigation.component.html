@@ -2,7 +2,7 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar class="Snel-title">
-      <h1 class="title text-info text-white-50">
+      <h1 class="">
         Snel bezorgd
       </h1>
     </mat-toolbar>
@@ -14,35 +14,33 @@
   </mat-sidenav>
   <mat-card-header>
     <div class="row">
-      <div class="col-lg-12 text-center">
-        <a href="#" >
-          <img src="assets/R.png" class="text-center" height="100" alt="CoolBrand">
+      <!-- <div class="col-lg-12 text-left">
+        <a href="#">
+          <img src="assets/R.png" class="text-center" height="200" alt="CoolBrand">
         </a>
+      </div> -->
 
-        <div class="title">
-          <h1 class="ah1">SnelBezorgd<br />Restaurant</h1>
-
-          <!-- <a target="_blank" href="http://codepen.io/Moslim/" class="white-mode">OTHER PENS</a> -->
-        </div>
-
-      </div>
       <div class="col">
+
         <mat-toolbar color="primary">
           <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
             *ngIf="isHandset$ | async">
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
-          <!-- <span>Snelbezorgd</span> -->
+          <img src="assets/R.png" class="text-center" height="75" alt="CoolBrand">
+          <h1 class="logo">SnelBezorgd</h1>
+
         </mat-toolbar>
         <img src="assets/header.jpg" class="img-fluid" alt="...">
       </div>
     </div>
-
   </mat-card-header>
 
   <mat-card-content>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
   </mat-card-content>
-  <mat-grid-tile-footer></mat-grid-tile-footer>
+  <mat-grid-tile-footer>
+    <app-footer></app-footer>
+  </mat-grid-tile-footer>
 </mat-sidenav-container>

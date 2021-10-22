@@ -1,55 +1,68 @@
-<div class="card">
-  <!-- <div class="card-header">
-    <h1 class="text-info text-center">Restaurant List</h1>
-  </div> -->
-  <div class="card-body">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 row-cols-sm-1">
-        <div *ngFor="let restaurant of restaurants">
-          <div class="col">
-            <div class="box p-2 border border-1 rounded">
-              <img [src]="restaurant.restaurantImageUrl" class="img-fluid" />
-              <h3 class="card-title text-center p-2">{{ restaurant.restaurantName }}
-                <div class="heart" *ngIf="!restaurant.favoriet">
-                  <i class="fas fa-heart-broken"></i>
-                </div>
-                <div class="heart" *ngIf=" restaurant.favoriet">
-                  <i class="fas fa-heart"></i>
-                </div>
-              </h3>
-              <p class="card-categories text-center">
-                {{ restaurant.categories }}
-              </p>
-              <p class="card-text">
-                <i class="fas fa-clock "></i>
-                {{ restaurant.tijdBezorgd }}
-                minuten
-              </p>
-              <p class="card-text">
-                <i class="fas fa-euro-sign"></i>
-                {{ restaurant.minBestellen }}
-                min bestellen
-              </p>
-              <p class="card-text">
-                <i class="fas fa-biking"></i>
-                €
-                {{ restaurant.bezorgdKosten }}
-                bezorgd kosten
-              </p>
-              <p class="card-text">
-                <i class="fas fa-star"></i>
-                {{ restaurant.starRating }}
-                ( 2132 )
-              </p>
-              <a class="btn btn-primary" mat-list-item href="#" routerLink="/restaurants/{{restaurant.id}}"
-                routerLinkActive="active">{{restaurant.id}} Details</a>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <input type="text" [(ngModel)]='listFilter' hidden />
+      <!-- <input type="text"[(ngModel)]='favorietsFilter'  /> -->
+      <button class="btn btn-dark m-2 active" (click)='allValue()'>Alles</button>
+      <button class="btn btn-dark m-2" (click)='lunchValue()'>Lunch</button>
+      <button class="btn btn-dark m-2" (click)='pizzaValue()'>Pizza</button>
+      <button class="btn btn-dark m-2" (click)='japaneseValue()'>Japanese</button>
+    </div>
+    <div class="col text-right">
+      <input type="text" [(ngModel)]='listFilter' hidden />
+      <button class="btn btn-outline-light m-2 btn-outline-dark" (click)='favorietValue()'>
+        <i class="far fa-heart fa-1x" ></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 row-cols-sm-1">
+    <div *ngFor="let restaurant of filteredRestaurants">
+      <div class="col">
+
+        <div class="box p-3 border border-1 rounded">
+          <img  [src]="restaurant.restaurantImageUrl" class="img-fluid" />
+          <h3 class="card-title text-center p-2">{{ restaurant.restaurantName }}
+            <div class="heart" *ngIf="!restaurant.favoriet">
+              <i class="fas fa-heart  fa-2x text-dark"></i>
             </div>
+            <div class="heart" *ngIf=" restaurant.favoriet">
+              <i class="fas fa-heart fa-2x text-danger"></i>
+            </div>
+          </h3>
+          <div class="card-text text-center pb-4">
+            <p class="card-categories text-center text-info p-2"
+            *ngFor="let cat of restaurant.cat; let last = last;">
+              <span *ngIf="cat.catName">  {{cat.catName}}<span *ngIf="!last">{{komma}}</span></span>
+            </p>
           </div>
+          <p class="card-text">
+            <i class="fas fa-clock "></i>
+            {{ restaurant.tijdBezorgd }}
+            minuten
+          </p>
+          <p class="card-text">
+            <i class="fas fa-euro-sign"></i>
+            {{ restaurant.minBestellen }}
+            min bestellen
+          </p>
+          <p class="card-text">
+            <i class="fas fa-biking"></i>
+            €
+            {{ restaurant.bezorgdKosten }}
+            bezorgd kosten
+          </p>
+          <p class="card-text">
+            <i class="fas fa-star"></i>
+            {{ restaurant.starRating }}
+            ( 2132 )
+          </p>
+          <a class=" btn btn-warning btn-block text-dark" mat-list-item href="#"
+            routerLink="/restaurants/{{restaurant.id}}" routerLinkActive="active">Bestellen</a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="card-footer">
-    <h1 class="text-info text-center">Footer</h1>
   </div>
 </div>

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -22,21 +21,16 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { MapComponent } from './map/map.component';
 import { RestaurantDetailComponent } from './restaurant/restaurant-detail.component';
 import { RestaurantDetailGuard } from './restaurant/restaurant-detail.guard';
-
+import {FormsModule} from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+import { RestaurantService } from './shared/restauant-service';
+import {appRoutes} from './routing';
+import { RouterModule, Routes } from '@angular/router';
+import { Error404Component } from './errors/404.component'
 
 
 // import { MapComponent } from './map/map.component';
-const appRoutes: Routes = [
 
-  {path: 'home', component: HomeComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'restaurants', component: RestaurantComponent},
-  {
-    path: 'restaurants/:id',
-    canActivate: [RestaurantDetailGuard],
-     component: RestaurantDetailComponent
-  }
-  ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,20 +38,13 @@ const appRoutes: Routes = [
     HomeComponent,
     ContactComponent,
     RestaurantComponent,
-
-
     MapComponent,
-      RestaurantDetailComponent,
+    RestaurantDetailComponent,
+    FooterComponent,
+    Error404Component
   ],
   imports: [
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true }
-       // <-- debugging purposes only
-    ),
-
-    //
-
+    RouterModule.forRoot(appRoutes,{ enableTracing: true }),
     BrowserModule,
     BrowserAnimationsModule,
     MatGridListModule,
@@ -71,9 +58,11 @@ const appRoutes: Routes = [
     MatListModule,
     FontAwesomeModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+
   ],
-  providers: [],
+  providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

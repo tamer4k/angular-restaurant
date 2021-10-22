@@ -4,37 +4,37 @@
       <i class="fa fa-chevron-left"></i> Back
     </button>
   </div>
-  <div class="card-body">
-    <div class="container">
-      <div class="card mb-lg-4">
-        <img src="assets\Restaurant_Insurance_Cover-1032x502.png.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!-- <img [src]="restaurant.restaurantImageUrl" class="rounded mx-auto d-block" /> -->
-          <a href="#!">
-            <div class="mask text-center">
-              <img [src]="restaurant.restaurantImageUrl" class=" rounded-circle "
-                style="height: 150px;margin-top: -70px;border: solid 3px #fff;" alt="...">
-            </div>
-          </a>
-          <div class="row align-items-center">
-            <div class="col text-left text-dark p-3">
-              <h2>{{ restaurant.starRating }}</h2>
-              <i class="fas fa-star fa-2x"></i>
-              <i class="fas fa-star fa-2x"></i>
-              <i class="fas fa-star fa-2x"></i>
-              <i class="fas fa-star fa-2x"></i>
-            </div>
-            <div class="col text-right p-3">
-              <!-- <p>{{ restaurant.favoriet}}</p> -->
-              <div class="heart" *ngIf="!restaurant.favoriet">
-                <i class="fas fa-heart-broken fa-3x"></i>
-              </div>
-              <div class="heart" *ngIf=" restaurant.favoriet">
-                <i class="fas fa-heart fa-3x"></i>
-              </div>
-            </div>
+
+
+
+  <div class="container-fluid">
+    <div class="card-body">
+      <!-- <img [src]="restaurant.restaurantImageUrl" class="rounded mx-auto d-block" /> -->
+      <div class="mask text-center">
+        <img [src]="restaurant.restaurantImageUrl" class=" rounded-circle"
+          style="height: 150px;margin-top: -70px;border: solid 3px #fff;" alt="...">
+      </div>
+      <div class="row align-items-center">
+        <div class="col text-left text-dark p-3">
+          <h2>{{ restaurant.starRating }}</h2>
+          <i class="fas fa-star fa-2x"></i>
+          <i class="fas fa-star fa-2x"></i>
+          <i class="fas fa-star fa-2x"></i>
+          <i class="fas fa-star fa-2x"></i>
+        </div>
+        <div class="col text-center p-3">
+          <h1>{{restaurant.restaurantName}}</h1>
+        </div>
+        <div class="col text-right p-3">
+          <div class="heart" *ngIf="!restaurant.favoriet">
+            <i class="fas fa-heart text-dark fa-3x"></i>
           </div>
-          <div class="row align-items-center">
+          <div class="heart" *ngIf=" restaurant.favoriet">
+            <i class="fas fa-heart fa-3x"></i>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row align-items-center">
             <div class="col text-left text-info p-3">
               <h1></h1>
             </div>
@@ -44,22 +44,59 @@
             <div class="col text-right text-info p-3">
               <h2>{{ restaurant.categories}}</h2>
             </div>
-          </div>
-        </div>
-      </div>
+          </div> -->
+      <!-- <div class="row align-items-center">
+            <div class="col text-left text-info p-3">
+              <div *ngFor="let cat of restaurant.cat">
+                <h1>{{cat.catName}}</h1>
+                <div *ngFor="let product of cat.producten">
+                  <h2>{{product.name}}</h2>
+                </div>
+              </div>
+
+            </div>
+            <div class="col text-right text-info p-3">
+              <h2>{{ restaurant.openingstiden}}</h2>
+            </div>
+          </div> -->
     </div>
-  </div>
-  <div class="card-footer">
-    <button class="btn btn-outline-dark" (click)='onBack()'>
-      <i class="fa fa-chevron-left"></i> Back
-    </button>
   </div>
 </div>
 
 
+<!-- Menu Start -->
+<div class="menu">
+  <div class="container">
+    <div class="section-header text-center font-weight-900">
+      <h1>Heerlijk Eten Menu</h1>
+    </div>
+    <div class="menu-tab" *ngFor="let cat of restaurant.cat">
+      <div class="col text-center text-warning font-weight-900 m-5 p-0 bg-dark">
+        <h2>
+          {{cat.catName}}
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-7 col-md-12">
+          <div class="menu-item" *ngFor="let product of cat.producten">
 
+              <img [src]="product.productImageUrl" class=" rounded-circle p-4" alt="Image">
 
+            <div class="menu-text">
+              <h3>
+                <span>{{product.name}}</span>
+                <strong>€{{product.prijs}}</strong>
+              </h3>
+              <div class="float-left m-0 p-2"><p>{{product.omschrijven}}</p></div>
 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <img src="assets/images/menu-burger-img.jpg" alt="Image">
+        </div>
+      </div>
 
-
-
+    </div>
+  </div>
+  <!-- Menu End -->
