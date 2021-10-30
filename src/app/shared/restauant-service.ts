@@ -15,18 +15,22 @@ interface Restaurant {
   soort: Number
   restaurantImageUrl: String
   favoriet: boolean
-  openingstiden: String
   cat?: Cat[]
+
 }
 
 export interface Cat {
   catName?: string
+  sideImageUrl?: string,
   producten?: Producten[]
 }
 
 export interface Producten {
-  id: number
-  name: string
+  id?: number
+  name?: string
+  prijs?: number
+  productImageUrl?: string
+  omschrijven?: string
 }
 
 

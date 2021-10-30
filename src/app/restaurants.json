@@ -9,16 +9,27 @@
     "minBestellen": 10.25,
     "soort": 1,
     "favoriet": false,
-    "openingstiden":"van 10:00 to 22:00",
     "restaurantImageUrl": "assets/oo.jpg",
+    "contact":[{"email":"backwerk@snelbezorgd.com","phone": 665458545, "postcode":"1825LS","straat":"Spadestraat 44"}],
+    "openingstijden" : [{
+      "zaterdag" : "van 10:00 tot 18:00",
+      "zondag" : "Gesloten",
+      "maandag" : "van 10:00 tot 18:00",
+      "dinsdag" : "van 10:00 tot 18:00",
+      "woensdag" : "van 10:00 tot 18:00",
+      "donderdag" : "van 10:00 tot 18:00",
+      "vrijdag" : "van 10:00 tot 18:00"
+    }],
     "cat": [
       {
           "catName": "Lunch",
+          "sideImageUrl": "assets/images/menu-burger-img.jpg",
           "producten": [
               {
                   "id": 1,
                   "name": "BackWERK",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
               },
@@ -26,6 +37,7 @@
                   "id": 2,
                   "name": "BackWERK",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -34,6 +46,7 @@
                   "id": 3,
                   "name": "BackWERK",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -42,27 +55,31 @@
       },
       {
           "catName": "snack",
+          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
-                "id": 1,
+                "id": 4,
                 "name": "BackWERK",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 2,
+                "id": 5,
                 "name": "BackWERK",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 3,
+                "id": 6,
                 "name": "BackWERK",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -70,40 +87,43 @@
         ]
       },
       {
-        "catName": "Sandwiches",
+        "catName": "",
+        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
-              "id": 1,
+              "id": 7,
               "name": "BackWERK",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 2,
+              "id": 8,
               "name": "BackWERK",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 3,
+              "id": 9,
               "name": "BackWERK",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           }
       ]
-    }
-  ]
-
+    }]
   },
   {
     "id": 2,
     "restaurantName": "Eazie",
+    "sideImageUrl": "assets/images/menu-burger-img.jpg",
     "starRating": 3.2,
     "categories": "Italian style pizza, Greek, Gyros",
     "tijdBezorgd": 25,
@@ -111,32 +131,45 @@
     "minBestellen": 20.00,
     "soort": 2,
     "favoriet": true,
-    "openingstiden":"van 10:00 to 22:00",
     "restaurantImageUrl": "assets/oo.jpg",
+    "contact":[{"email":"backwerk@snelbezorgd.com","phone": 665458545, "postcode":"1825LS","straat":"Spadestraat 44"}],
+    "openingstijden" : [{
+      "zaterdag" : "van 10:00 tot 18:00",
+      "zondag" : "Gesloten",
+      "maandag" : "van 10:00 tot 18:00",
+      "dinsdag" : "van 10:00 tot 18:00",
+      "woensdag" : "van 10:00 tot 18:00",
+      "donderdag" : "van 10:00 tot 18:00",
+      "vrijdag" : "van 10:00 tot 18:00"
+    }],
     "cat": [
       {
           "catName": "Italian pizza",
+          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
               {
-                  "id": 1,
+                  "id": 10,
                   "name": "Eazie",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 2,
+                  "id": 11,
                   "name": "Eazie",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 3,
+                  "id": 12,
                   "name": "Eazie",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -145,27 +178,31 @@
       },
       {
           "catName": "Greek",
+          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
-                "id": 1,
+                "id": 13,
                 "name": "Eazie",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 2,
+                "id": 14,
                 "name": "Eazie",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 3,
+                "id": 15,
                 "name": "Eazie",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -174,27 +211,31 @@
       },
       {
         "catName": "Gyros",
+        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
-              "id": 1,
+              "id": 16,
               "name": "Eazie",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 2,
+              "id": 17,
               "name": "Eazie",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 3,
+              "id": 18,
               "name": "Eazie",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -213,32 +254,45 @@
     "minBestellen": 13.75,
     "soort": 3,
     "favoriet": false,
-    "openingstiden":"van 10:00 to 22:00",
     "restaurantImageUrl": "assets/oo.jpg",
+    "contact":[{"email":"backwerk@snelbezorgd.com","phone": 665458545, "postcode":"1825LS","straat":"Spadestraat 44"}],
+    "openingstijden" : [{
+      "zaterdag" : "van 10:00 tot 18:00",
+      "zondag" : "Gesloten",
+      "maandag" : "van 10:00 tot 18:00",
+      "dinsdag" : "van 10:00 tot 18:00",
+      "woensdag" : "van 10:00 tot 18:00",
+      "donderdag" : "van 10:00 tot 18:00",
+      "vrijdag" : "van 10:00 tot 18:00"
+    }],
     "cat": [
       {
           "catName": "Sushi",
+          "sideImageUrl": "assets/images/menu-burger-img.jpg",
           "producten": [
               {
-                  "id": 1,
+                  "id": 19,
                   "name": "p1",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 2,
+                  "id": 20,
                   "name": "p2",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 3,
+                  "id": 21,
                   "name": "p3",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -247,27 +301,31 @@
       },
       {
           "catName": "Poke bowl",
+          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
-                "id": 1,
+                "id": 22,
                 "name": "p1",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 2,
+                "id": 23,
                 "name": "p2",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 3,
+                "id": 24,
                 "name": "p3",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -276,27 +334,31 @@
       },
       {
         "catName": "Japanese",
+        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
-              "id": 1,
+              "id": 25,
               "name": "p1",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 2,
+              "id": 26,
               "name": "p2",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 3,
+              "id": 27,
               "name": "p3",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -315,32 +377,45 @@
     "minBestellen": 7.25,
     "soort": 1,
     "favoriet": true,
-    "openingstiden":"van 10:00 to 22:00",
     "restaurantImageUrl": "assets/oo.jpg",
+    "contact":[{"email":"backwerk@snelbezorgd.com","phone": 665458545, "postcode":"1825LS","straat":"Spadestraat 44"}],
+    "openingstijden" : [{
+      "zaterdag" : "van 10:00 tot 18:00",
+      "zondag" : "Gesloten",
+      "maandag" : "van 10:00 tot 18:00",
+      "dinsdag" : "van 10:00 tot 18:00",
+      "woensdag" : "van 10:00 tot 18:00",
+      "donderdag" : "van 10:00 tot 18:00",
+      "vrijdag" : "van 10:00 tot 18:00"
+    }],
     "cat": [
       {
           "catName": "Salads",
+          "sideImageUrl": "assets/images/menu-burger-img.jpg",
           "producten": [
               {
-                  "id": 1,
+                  "id": 28,
                   "name": "p1",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 2,
+                  "id": 29,
                   "name": "p2",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 3,
+                  "id": 30,
                   "name": "p3",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -349,27 +424,31 @@
       },
       {
           "catName": "Lunch",
+          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
-                "id": 1,
+                "id": 31,
                 "name": "p1",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 2,
+                "id": 32,
                 "name": "p2",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 3,
+                "id": 33,
                 "name": "p3",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -378,17 +457,19 @@
       },
       {
         "catName": "Sandwiches",
+        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
-              "id": 1,
+              "id": 34,
               "name": "p1",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 2,
+              "id": 35,
               "name": "p2",
               "prijs": 10,
               "productImageUrl": "assets/images/menu-burger.jpg",
@@ -396,9 +477,10 @@
 
           },
           {
-              "id": 3,
+              "id": 36,
               "name": "p3",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -410,6 +492,7 @@
   {
     "id": 5,
     "restaurantName": "WOKKi",
+    "sideImageUrl": "assets/images/menu-burger-img.jpg",
     "starRating": 3.2,
     "categories": "Burgers, Chicken, Fries",
     "tijdBezorgd": 15,
@@ -417,32 +500,45 @@
     "minBestellen": 18.80,
     "soort": 1,
     "favoriet": false,
-    "openingstiden":"van 10:00 to 22:00",
     "restaurantImageUrl": "assets/oo.jpg",
+    "contact":[{"email":"backwerk@snelbezorgd.com","phone": 665458545, "postcode":"1825LS","straat":"Spadestraat 44"}],
+    "openingstijden" : [{
+      "zaterdag" : "van 10:00 tot 18:00",
+      "zondag" : "Gesloten",
+      "maandag" : "van 10:00 tot 18:00",
+      "dinsdag" : "van 10:00 tot 18:00",
+      "woensdag" : "van 10:00 tot 18:00",
+      "donderdag" : "van 10:00 tot 18:00",
+      "vrijdag" : "van 10:00 tot 18:00"
+    }],
     "cat": [
       {
           "catName": "Burgers",
+          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
               {
-                  "id": 1,
+                  "id": 37,
                   "name": "p1",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 2,
+                  "id": 38,
                   "name": "p2",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 3,
+                  "id": 39,
                   "name": "p3",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -451,27 +547,31 @@
       },
       {
           "catName": "Chicken",
+          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
-                "id": 1,
+                "id": 40,
                 "name": "p1",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 2,
+                "id": 41,
                 "name": "p2",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 3,
+                "id": 42,
                 "name": "p3",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -480,27 +580,31 @@
       },
       {
         "catName": "Fries",
+        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
-              "id": 1,
+              "id": 43,
               "name": "p1",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 2,
+              "id": 44,
               "name": "p2",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 3,
+              "id": 45,
               "name": "p3",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -519,32 +623,45 @@
     "minBestellen": 19.99,
     "soort": 1,
     "favoriet": true,
-    "openingstiden":"van 10:00 to 22:00",
     "restaurantImageUrl": "assets/oo.jpg",
+    "contact":[{"email":"backwerk@snelbezorgd.com","phone": 665458545, "postcode":"1825LS","straat":"Spadestraat 44"}],
+    "openingstijden" : [{
+      "zaterdag" : "van 10:00 tot 18:00",
+      "zondag" : "Gesloten",
+      "maandag" : "van 10:00 tot 18:00",
+      "dinsdag" : "van 10:00 tot 18:00",
+      "woensdag" : "van 10:00 tot 18:00",
+      "donderdag" : "van 10:00 tot 18:00",
+      "vrijdag" : "van 10:00 tot 18:00"
+    }],
     "cat": [
       {
           "catName": "Pizza",
+          "sideImageUrl": "assets/images/menu-burger-img.jpg",
           "producten": [
               {
-                  "id": 1,
+                  "id": 46,
                   "name": "p1",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 2,
+                  "id": 47,
                   "name": "p2",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
-                  "id": 3,
+                  "id": 48,
                   "name": "p3",
                   "prijs": 10,
+                  "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -553,17 +670,19 @@
       },
       {
           "catName": "Snacks",
+          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
-                "id": 1,
+                "id": 49,
                 "name": "p1",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
-                "id": 2,
+                "id": 50,
                 "name": "p2",
                 "prijs": 10,
                 "productImageUrl": "assets/images/menu-burger.jpg",
@@ -571,9 +690,10 @@
 
             },
             {
-                "id": 3,
+                "id": 51,
                 "name": "p3",
                 "prijs": 10,
+                "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
@@ -582,27 +702,31 @@
       },
       {
         "catName": "Sandwiches",
+        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
-              "id": 1,
+              "id": 52,
               "name": "p1",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 2,
+              "id": 53,
               "name": "p2",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
-              "id": 3,
+              "id": 54,
               "name": "p3",
               "prijs": 10,
+              "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 

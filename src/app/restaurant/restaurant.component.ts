@@ -19,7 +19,6 @@ interface Restaurant {
   soort: Number
   restaurantImageUrl: String
   favoriet: boolean
-  openingstiden: String
   cat?: Cat[]
 
 }

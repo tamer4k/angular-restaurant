@@ -99,7 +99,7 @@
 /*******************************/
 .menu {
   position: relative;
-  padding: 45px 0 15px 0;
+  /* padding: 45px 0 15px 0; */
 }
 
 .menu .menu-tab {
@@ -107,8 +107,9 @@
 }
 
 .menu .menu-tab img {
-  max-width: 100%;
-  border-radius: 15px;
+  max-width: 70%;
+  border: 2px solid rgb(224, 158, 4);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .menu .menu-tab .nav.nav-pills .nav-link {
@@ -218,7 +219,6 @@
       display: none;
   }
 }
-
 
 
 

@@ -1,0 +1,82 @@
+<!-- <ng-container *ngIf="products.length !=0"> -->
+<ng-container >
+  <div class="container" *ngIf="getCartDetails">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center text-info p-4">Winkelwagen</h1>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col">
+        <div>
+          <table class="table table-striped text-center font-weight-bold">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">P.N</th>
+                <th scope="col">Prijs</th>
+                <th scope="col">Aantal</th>
+                <th scope="col">S.T</th>
+                <th scope="col">Item verwijderen</th>
+              </tr>
+            </thead>
+            <tbody class="text-secondary ">
+              <tr *ngFor="let getCartDetail of getCartDetails" >
+                <td class="align-middle"><img [src]="getCartDetail.productImageUrl" class=" w-25 rounded-circle"
+                    alt="Image"></td>
+                <td class="align-middle">{{getCartDetail.name}}</td>
+                <td class="align-middle">€ {{getCartDetail.prijs}}</td>
+                <td class="align-middle">
+                  <button class="btn btn-light d-inline border-secondary"
+                    (click)="incQnt(getCartDetail.id, getCartDetail.qnt)"><i class="fas fa-plus  text-secondary"></i>
+                  </button>
+                  <p class="p-2 d-inline">{{getCartDetail.qnt}}</p>
+                  <button class="btn btn-light d-inline border-secondary"
+                    (click)="decQnt(getCartDetail.id, getCartDetail.qnt)"><i
+                      class="fas fa-minus text-secondary"></i></button>
+                </td>
+                <td class="align-middle">€{{getCartDetail.qnt * getCartDetail.prijs | number}}</td>
+                <td class="align-middle">
+                  <button class=" border-0 btn btn-outline-secondary" (click)="singleDelete(getCartDetail.id)"><i
+                      class="fas fa-trash-alt fa-2x text-danger "></i></button>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col p-2 text-secondary">
+        <h1>Totaal €{{totaal}} </h1>
+      </div>
+      <div class="col">
+        <button class="btn btn-light bg-danger text-white  border-secondary float-right" (click)="removeAll()"><i
+            class="fas fa-trash-alt text-white"></i> Verwijderen Alles</button>
+      </div>
+    </div>
+  </div>
+  <!---------------------------------------------------------->
+  <div class="container text-center" *ngIf="getCartDetails <=0" >
+    <!-- <div class="row p-2">
+      <div class="col">
+        <img class="text-center img-thumbnail w-25"
+          src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
+          alt="">
+      </div>
+    </div> -->
+    <div class="row p-2">
+      <div class="col text-info">
+        <h1>Uw winkelwagen is leeg!</h1>
+        <h1>Voeg er nu een item aan toe</h1>
+        <button routerLink="/restaurants" class="btn btn-warning">Bestel nu</button>
+      </div>
+    </div>
+  </div>
+
+</ng-container>
+
+
+<!-- <ng-container *ngIf="products.length ==0"> -->
+

@@ -26,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
 import { RestaurantService } from './shared/restauant-service';
 import {appRoutes} from './routing';
 import { RouterModule, Routes } from '@angular/router';
-import { Error404Component } from './errors/404.component'
+import { Error404Component } from './errors/404.component';
+import { CartComponent } from './cart/cart.component'
 
 
 // import { MapComponent } from './map/map.component';
@@ -41,11 +42,13 @@ import { Error404Component } from './errors/404.component'
     MapComponent,
     RestaurantDetailComponent,
     FooterComponent,
-    Error404Component
+    Error404Component,
+    CartComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{ enableTracing: true }),
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
