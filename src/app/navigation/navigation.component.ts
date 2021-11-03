@@ -18,7 +18,7 @@ export class NavigationComponent {
       map(result => result.matches),
       shareReplay()
     );
- public amount!: number;
+ public amount: number = 0;
 
   constructor(private breakpointObserver: BreakpointObserver, private auth: AuthService) {
     this.auth.cartSubject.subscribe((data)=>{
