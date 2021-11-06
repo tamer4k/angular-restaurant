@@ -40,6 +40,7 @@ export interface Producten {
 })
 export class CartComponent implements OnInit {
   restaurant!: Restaurant;
+  BezorgdKosten: number = 0;
   constructor(private auth:AuthService,private route: ActivatedRoute, private router: Router,) { }
 
   ngOnInit(): void {
@@ -91,11 +92,20 @@ export class CartComponent implements OnInit {
         return acc + (val.prijs * val.qnt);
       }, 0);
     }
+    if(this.totaal >= 35 || this.getCartDetails == 0){
+      this.BezorgdKosten = 0;
+     } else{
+      this.BezorgdKosten = 5;
+    }
+  }
+  MyLog(mylog: any){
+   console.log(mylog);
   }
   removeAll() {
     localStorage.removeItem('localCart');
     this.getCartDetails = [];
     this.totaal = 0;
+    this.BezorgdKosten = 0;
     this.cartNumber = 0;
     this.auth.cartSubject.next(this.cartNumber);
   }

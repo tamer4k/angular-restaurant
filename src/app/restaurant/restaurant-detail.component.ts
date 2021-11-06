@@ -139,7 +139,7 @@ export class RestaurantDetailComponent implements OnInit {
       product.qnt -= 1;
   }
 
-
+ 
 
 
 }

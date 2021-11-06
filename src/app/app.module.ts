@@ -27,7 +27,8 @@ import { RestaurantService } from './shared/restauant-service';
 import {appRoutes} from './routing';
 import { RouterModule, Routes } from '@angular/router';
 import { Error404Component } from './errors/404.component';
-import { CartComponent } from './cart/cart.component'
+import { CartComponent } from './cart/cart.component';
+import { KassabonComponent } from './kassabon/kassabon.component'
 
 
 // import { MapComponent } from './map/map.component';
@@ -43,7 +44,8 @@ import { CartComponent } from './cart/cart.component'
     RestaurantDetailComponent,
     FooterComponent,
     Error404Component,
-    CartComponent
+    CartComponent,
+    KassabonComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{ enableTracing: true }),

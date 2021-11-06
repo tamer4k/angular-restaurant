@@ -1,6 +1,6 @@
 <!-- <ng-container *ngIf="products.length !=0"> -->
-<ng-container >
-  <div class="container" *ngIf="getCartDetails">
+
+  <div class="container" *ngIf="getCartDetails.length > 0">
     <div class="row">
       <div class="col">
         <h1 class="text-center text-info p-4">Winkelwagen</h1>
@@ -49,24 +49,28 @@
     </div>
     <div class="row ">
       <div class="col p-2 text-secondary">
-        <h1>Totaal €{{totaal}} </h1>
+        <p>Bestel je voor €35 of meer? Dan is de bezorging gratis!</p>
+        <h1 class="text-info">Bezorgd kosten €{{BezorgdKosten}} </h1>
+        <h1>Totaal €{{totaal + BezorgdKosten}} </h1>
       </div>
       <div class="col">
-        <button class="btn btn-light bg-danger text-white  border-secondary float-right" (click)="removeAll()"><i
+        <button class="btn btn-light bg-danger text-white  border-secondary float-right m-2" (click)="removeAll()"><i
             class="fas fa-trash-alt text-white"></i> Verwijderen Alles</button>
+            <button routerLink="/kassabon" class="btn btn-dark float-right m-2"><i class="fas fa-file-invoice-dollar"></i> Kassabon</button>
       </div>
     </div>
   </div>
   <!---------------------------------------------------------->
-  <div class="container text-center" *ngIf="getCartDetails <=0" >
-    <!-- <div class="row p-2">
-      <div class="col">
-        <img class="text-center img-thumbnail w-25"
+  <div class="container text-center" *ngIf="getCartDetails == 0" >
+    <div class="row p-4">
+      <div class="col pt-3">
+        <!-- <img class="text-center img-thumbnail w-25"
           src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
-          alt="">
+          alt=""> -->
+          <i class="fas fa-cart-plus text-warning fa-8x"></i>
       </div>
-    </div> -->
-    <div class="row p-2">
+    </div>
+    <div class="row  p-2">
       <div class="col text-info">
         <h1>Uw winkelwagen is leeg!</h1>
         <h1>Voeg er nu een item aan toe</h1>
@@ -75,7 +79,7 @@
     </div>
   </div>
 
-</ng-container>
+
 
 
 <!-- <ng-container *ngIf="products.length ==0"> -->
