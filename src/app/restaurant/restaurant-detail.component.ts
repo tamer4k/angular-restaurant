@@ -4,7 +4,7 @@ import restaurantData from '../restaurants.json';
 import { AuthService } from '../shared/auth.service';
 
 // import { CartService } from '../shared/cart.service';
-
+declare let toastr: any
 interface Restaurant {
   id: Number
   restaurantName: String
@@ -13,7 +13,6 @@ interface Restaurant {
   tijdBezorgd: Number
   minBestellen: Number
   bezorgdKosten: Number
-  soort: Number
   restaurantImageUrl: String
   favoriet: boolean
   contact?: Contact[]
@@ -63,14 +62,12 @@ export interface Producten {
 
 
 export class RestaurantDetailComponent implements OnInit {
-
+  searchValue?: any;
   restaurant!: Restaurant;
   constructor(private route: ActivatedRoute,
     private router: Router,
     private auth: AuthService
-    // private cartService: CartService
   ) { }
-  // items$ = this.cartService.items$;
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -139,7 +136,7 @@ export class RestaurantDetailComponent implements OnInit {
       product.qnt -= 1;
   }
 
- 
+
 
 
 }

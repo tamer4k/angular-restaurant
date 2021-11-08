@@ -12,7 +12,6 @@ interface Restaurant {
   tijdBezorgd: Number
   minBestellen: Number
   bezorgdKosten: Number
-  soort: Number
   restaurantImageUrl: String
   favoriet: boolean
   cat?: Cat[]

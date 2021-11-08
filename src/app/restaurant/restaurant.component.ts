@@ -16,7 +16,6 @@ interface Restaurant {
   tijdBezorgd: Number
   minBestellen: Number
   bezorgdKosten: Number
-  soort: Number
   restaurantImageUrl: String
   favoriet: boolean
   cat?: Cat[]
@@ -47,6 +46,7 @@ export interface Producten {
 
 export class RestaurantComponent implements OnInit {
   constructor() { }
+  searchValue? : any ;
   komma = ","
   filteredRestaurants: Restaurant[] = [];
   restaurants: Restaurant[] = restaurantData;
@@ -63,16 +63,15 @@ export class RestaurantComponent implements OnInit {
     return this.restaurants.filter((restaurant: Restaurant) =>
       restaurant.categories.toLocaleLowerCase().includes(filterBy));
   }
-
   filterFavoriet(): Restaurant[] {
     return this.restaurants.filter((restaurant: Restaurant) => restaurant.favoriet === true);
   }
-
   ngOnInit(): void {
     this.filteredRestaurants = this.restaurants;
     this.listFilter = '';
-    debugger;
   }
+
+
   allValue(): void {
     this.listFilter = '';
   }
@@ -89,6 +88,8 @@ export class RestaurantComponent implements OnInit {
     this.filteredRestaurants = this.filterFavoriet();
 
   }
+
+
 
 
 }

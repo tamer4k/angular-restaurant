@@ -28,7 +28,10 @@ import {appRoutes} from './routing';
 import { RouterModule, Routes } from '@angular/router';
 import { Error404Component } from './errors/404.component';
 import { CartComponent } from './cart/cart.component';
-import { KassabonComponent } from './kassabon/kassabon.component'
+import { KassabonComponent } from './kassabon/kassabon.component';
+import { TestComponent } from './test/test.component';
+import { SearchfilterPipe } from './searchfilter.pipe';
+import { SearchfilterCatPipe } from './searchfilter-cat.pipe'
 
 
 // import { MapComponent } from './map/map.component';
@@ -45,7 +48,10 @@ import { KassabonComponent } from './kassabon/kassabon.component'
     FooterComponent,
     Error404Component,
     CartComponent,
-    KassabonComponent
+    KassabonComponent,
+    TestComponent,
+    SearchfilterPipe,
+    SearchfilterCatPipe
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{ enableTracing: true }),
