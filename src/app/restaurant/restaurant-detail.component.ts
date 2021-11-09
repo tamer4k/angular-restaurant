@@ -62,7 +62,7 @@ export interface Producten {
 
 
 export class RestaurantDetailComponent implements OnInit {
-  searchValue?: any;
+  searchValue2?: any;
   restaurant!: Restaurant;
   constructor(private route: ActivatedRoute,
     private router: Router,

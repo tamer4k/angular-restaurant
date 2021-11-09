@@ -1,11 +1,10 @@
+
+
 <div class="card-header">
   <button class="btn btn-outline-dark" (click)='onBack()'>
     <i class="fa fa-chevron-left"></i> Back
   </button>
 </div>
-
-
-
 <div class="container-fluid">
   <div class="row border border-info m-2 rounded p-2">
     <div class="col text-center">
@@ -40,14 +39,31 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <input type="text" class="form-control" [(ngModel)]="searchValue" id="search" />
-    <div class="ss m-2" *ngFor="let cat of restaurant.cat ">
-      <button class="btn btn-dark">{{cat.catName}}</button>
-    </div>
-  </div>
-</div>
+
+<ngb-accordion  class="container"[closeOthers]="true">
+  <ngb-panel title="{{cat.catName}}"  *ngFor="let cat of restaurant.cat">
+    <ng-template ngbPanelContent>
+      <div class="row mt-3" *ngFor="let product of cat.producten ">
+               <div class="col-2 mb-3  text-center">
+            <img [src]="product.productImageUrl" class="imgA rounded-circle w-50" alt="Image">
+          </div>
+          <div class="menu-textA col text-center">
+            <h3 class="text-left">{{product.name}}<strong class="d-inline text-secondary">€{{product.prijs}}</strong></h3>
+            <div class="text-left d-block bg-light">
+              <p>{{product.omschrijven}}</p>
+            </div>
+          </div>
+          <div class="col text-center">
+            <button class="btn btn-warning d-inline" (click)="ins(product)"><i class="fas fa-plus"></i></button>
+            <p class="p-3  d-inline">{{product.qnt}}</p>
+            <button class="btn btn-warning d-inline" (click)="dec(product)"><i class="fas fa-minus"></i></button>
+            <input class="btn btn-warning p-2 ml-3" type="button" (click)="addtocart(product)" value="toevoegen" />
+          </div>
+      </div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
 
 
 <div class="container-fluid">

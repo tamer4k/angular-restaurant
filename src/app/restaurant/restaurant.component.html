@@ -1,25 +1,25 @@
 <div class="container">
   <div class="row">
+    <div class="col-4 mt-2">
+      <input type="text" [(ngModel)]='searchValue' />
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
     <div class="col ">
       <input type="text" [(ngModel)]='listFilter' hidden />
-      <!-- <input type="text"[(ngModel)]='favorietsFilter'  /> -->
-
       <button class="btn btn-dark m-2 active" (click)='allValue()'>Alles</button>
       <button class="btn btn-dark m-2" (click)='lunchValue()'>Lunch</button>
       <button class="btn btn-dark m-2" (click)='pizzaValue()'>Pizza</button>
       <button class="btn btn-dark m-2" (click)='japaneseValue()'>Japanese</button>
-      <input type="text" class="form-control " [(ngModel)]='searchValue'/>
-      <!-- <div class="ss m-2" *ngFor="let cat of restaurant.cat">
-        <button class="btn btn-dark" >{{cat.catName}}</button>
-      </div> -->
     </div>
     <div class="col text-right">
       <input type="text" [(ngModel)]='listFilter' hidden />
       <button class="btn btn-outline-light m-2 btn-outline-dark" (click)='favorietValue()'>
-        <i class="far fa-heart fa-1x" ></i>
+        <i class="far fa-heart fa-1x"></i>
       </button>
-
-
     </div>
   </div>
 </div>
@@ -28,9 +28,8 @@
   <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 row-cols-sm-1">
     <div *ngFor="let restaurant of filteredRestaurants | searchfilter:searchValue">
       <div class="col">
-
         <div class="box p-3 border border-1 rounded">
-          <img  [src]="restaurant.restaurantImageUrl" class="img-fluid" />
+          <img [src]="restaurant.restaurantImageUrl" class="img-fluid" />
           <h3 class="card-title text-center p-2">{{ restaurant.restaurantName }}
             <div class="heart" *ngIf="!restaurant.favoriet">
               <i class="fas fa-heart  fa-2x text-dark"></i>
@@ -40,9 +39,8 @@
             </div>
           </h3>
           <div class="card-text text-center pb-4">
-            <p class="card-categories text-center text-info p-2"
-            *ngFor="let cat of restaurant.cat; let last = last;">
-              <span *ngIf="cat.catName">  {{cat.catName}}<span *ngIf="!last">{{komma}}</span></span>
+            <p class="card-categories text-center text-info p-2" *ngFor="let cat of restaurant.cat; let last = last;">
+              <span *ngIf="cat.catName"> {{cat.catName}}<span *ngIf="!last">{{komma}}</span></span>
             </p>
           </div>
           <p class="card-text">

@@ -31,7 +31,6 @@ import { CartComponent } from './cart/cart.component';
 import { KassabonComponent } from './kassabon/kassabon.component';
 import { TestComponent } from './test/test.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
-import { SearchfilterCatPipe } from './searchfilter-cat.pipe'
 
 
 // import { MapComponent } from './map/map.component';
@@ -51,7 +50,6 @@ import { SearchfilterCatPipe } from './searchfilter-cat.pipe'
     KassabonComponent,
     TestComponent,
     SearchfilterPipe,
-    SearchfilterCatPipe
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{ enableTracing: true }),

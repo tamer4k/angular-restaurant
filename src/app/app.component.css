@@ -1,0 +1,11 @@
+.btn-link {
+  background-color: #719a0a !important;
+}
+.btn .btn-link {
+  background-color: #719a0a !important;
+}
+
+.btn.btn-link.collapsed.ng-star-inserted{
+  background-color: #719a0a !important;
+
+}
