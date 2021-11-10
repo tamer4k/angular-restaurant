@@ -40,7 +40,7 @@
 </div>
 
 
-<ngb-accordion  class="container"[closeOthers]="true">
+<!-- <ngb-accordion  class="container"[closeOthers]="true">
   <ngb-panel title="{{cat.catName}}"  *ngFor="let cat of restaurant.cat">
     <ng-template ngbPanelContent>
       <div class="row mt-3" *ngFor="let product of cat.producten ">
@@ -62,14 +62,21 @@
       </div>
     </ng-template>
   </ngb-panel>
-</ngb-accordion>
-
+</ngb-accordion> -->
 
 
 <div class="container-fluid">
-  <div class="row menu border border-info m-2 rounded p-2 " >
+  <div class="row menu border border-info m-2 rounded p-2 "  >
     <div class="col-9 font-weight-bold">
-      <div class="menu-tab" *ngFor="let cat of restaurant.cat ">
+
+      <div class="row ">
+        <button class="btn btn-outline-dark m-2">Alle</button>
+        <div class="col " *ngFor="let cat of restaurant.cat ">
+      <button class="btn btn-outline-dark m-2">{{cat.catName}}</button>
+        </div>
+      </div>
+
+      <div  class="menu-tab   border border-secondary-25 m-2 rounded  shadow-sm  p-3 mb-5 bg-body rounded"  *ngFor="let cat of restaurant.cat ">
         <div class="row align-middle">
           <div class="col text-secondary p-2 text-center font-weight-bold">
 
@@ -87,10 +94,10 @@
             </div>
           </div>
           <div class="col text-center">
-            <button class="btn btn-warning d-inline" (click)="ins(product)"><i class="fas fa-plus"></i></button>
+            <button class="btn btn-warning d-inline shadow" (click)="ins(product)"><i class="fas fa-plus"></i></button>
             <p class="p-3  d-inline">{{product.qnt}}</p>
-            <button class="btn btn-warning d-inline" (click)="dec(product)"><i class="fas fa-minus"></i></button>
-            <input class="btn btn-warning p-2 ml-3" type="button" (click)="addtocart(product)" value="toevoegen" />
+            <button class="btn btn-warning d-inline shadow" (click)="dec(product)"><i class="fas fa-minus"></i></button>
+            <input class="btn btn-warning p-2 ml-3 shadow  " type="button" (click)="addtocart(product)" value="toevoegen" />
           </div>
           <!-- <div class="col text-center mb-3">
             <img class="rounded w-75 border-secondary" [src]="cat.sideImageUrl" alt="Image">
@@ -100,7 +107,7 @@
     </div>
 
     <!-- Sidebare -->
-    <div class="col border border-secondary rounded p-2">
+    <div class="col border border-secondary-50 rounded p-2">
       <div class="text-left text-dark ml-3 p-3" *ngFor="let open of restaurant.openingstijden">
         <h1>Openingstijden</h1>
         <p><i class="fas fa-store-alt text-success p-1"></i> Maandag: {{open.maandag}}</p>

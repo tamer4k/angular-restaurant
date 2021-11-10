@@ -57,13 +57,16 @@ export interface Producten {
 export class SearchfilterPipe implements PipeTransform {
 
   transform(Restaurants: Restaurant[], searchValue: string): Restaurant[] {
-    if (!Restaurants || ! searchValue){ 
+    if (!Restaurants || ! searchValue){
       return Restaurants;
     }
     return Restaurants.filter(cat =>
       cat.restaurantName.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ||
       cat.categories.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ||
-      cat.starRating.toString().toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+      cat.starRating.toString().toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ||
+      cat.minBestellen.toString().toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) 
+
+
       );
 
   }

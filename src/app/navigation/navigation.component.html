@@ -7,10 +7,11 @@
       </h1>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#" routerLink="/home" routerLinkActive="active">Home</a>
-      <a mat-list-item href="#" routerLink="/restaurants" routerLinkActive="active">Alle restaurants</a>
-      <a mat-list-item href="#" routerLink="/contact" routerLinkActive="active">Contact</a>
-      <a mat-list-item href="#" routerLink="/cart" routerLinkActive="active">Cart <i class="amount fa fa-shopping-cart pl-3 mb-1 fa-2x"></i><div class="cart_value text-white bg-danger rounded-circle p-1 mb-5 ml-n2 pl-2 pr-2 ">{{amount}}</div></a>
+      <a mat-list-item href="#" routerLink="/cart" routerLinkActive="active"> <i class="amount fa fa-shopping-cart text-warning pl-3 mb-1 fa-1x"></i><h5 class="cart_value text-white bg-danger rounded-circle p-1 mb-5 ml-n2 pl-2 pr-2 ">{{amount}}</h5>Cart</a>
+
+      <a mat-list-item href="#" routerLink="/home" routerLinkActive="active"><i class="fas fa-home text-warning pl-3 mb-1 fa-1x pr-2"></i>Home</a>
+      <a mat-list-item href="#" routerLink="/restaurants" routerLinkActive="active"><i class="fas fa-utensils text-warning pl-3 mb-1 fa-1x pr-2"></i>Alle restaurants</a>
+      <a mat-list-item href="#" routerLink="/contact" routerLinkActive="active"><i class="fas fa-id-card text-warning pl-3 mb-1 fa-1x pr-2"></i> Contact</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-card-header>

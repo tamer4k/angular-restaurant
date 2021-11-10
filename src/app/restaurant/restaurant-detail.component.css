@@ -115,7 +115,7 @@
   max-width: 70%;
   border: 2px solid rgb(224, 158, 4);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;}
 
 .menu .menu-tab .nav.nav-pills .nav-link {
   color: #ffffff;
@@ -213,7 +213,7 @@
   float: right;
   padding-left: 5px;
   color: #fbaf32;
-  background: #ffffff;
+  background: #fafafa;
 }
 .menu-textA h3 strong {
   display: inline-block;
