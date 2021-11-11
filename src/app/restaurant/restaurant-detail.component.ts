@@ -64,15 +64,32 @@ export interface Producten {
 export class RestaurantDetailComponent implements OnInit {
   searchValue2?: any;
   restaurant!: Restaurant;
+  filteredRestaurants: Restaurant[] = [];
+  restaurants: Restaurant[] = restaurantData;
   constructor(private route: ActivatedRoute,
     private router: Router,
     private auth: AuthService
   ) { }
+  private _listFilter: string = '';
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredRestaurants = this.categoriesFilter(value);
+  }
+  categoriesFilter(filterBy: string): Restaurant[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.restaurants.filter((restaurant: Restaurant) =>
+      restaurant.categories.toLocaleLowerCase().includes(filterBy));
+  }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.restaurant = restaurantData.find(r => r.id == id) ?? <Restaurant>{};
     this.cartItemFunc();
+    this.filteredRestaurants = this.restaurants;
+    this.listFilter = '';
   }
   onBack(): void {
     this.router.navigate(['/restaurants']);
@@ -137,6 +154,11 @@ export class RestaurantDetailComponent implements OnInit {
   }
 
 
-
+  allValue(): void {
+    this.listFilter = '';
+  }
+  CategoryValue(): void {
+    this.listFilter = 'Greek';
+  }
 
 }

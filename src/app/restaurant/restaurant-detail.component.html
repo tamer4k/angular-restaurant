@@ -1,5 +1,3 @@
-
-
 <div class="card-header">
   <button class="btn btn-outline-dark" (click)='onBack()'>
     <i class="fa fa-chevron-left"></i> Back
@@ -39,7 +37,6 @@
   </div>
 </div>
 
-
 <!-- <ngb-accordion  class="container"[closeOthers]="true">
   <ngb-panel title="{{cat.catName}}"  *ngFor="let cat of restaurant.cat">
     <ng-template ngbPanelContent>
@@ -64,19 +61,27 @@
   </ngb-panel>
 </ngb-accordion> -->
 
+<div class="container">
+  <div class="row">
+    <div class="col ">
+      <input type="text" [(ngModel)]='listFilter'/>
+    </div>
+  </div>
+</div>
 
 <div class="container-fluid">
-  <div class="row menu border border-info m-2 rounded p-2 "  >
+  <div class="row menu border border-info m-2 rounded p-2 ">
     <div class="col-9 font-weight-bold">
 
       <div class="row ">
-        <button class="btn btn-outline-dark m-2">Alle</button>
+        <button class="btn btn-outline-dark m-2" (click)='allValue()'>Alle</button>
         <div class="col " *ngFor="let cat of restaurant.cat ">
-      <button class="btn btn-outline-dark m-2">{{cat.catName}}</button>
+          <button class="btn btn-outline-dark m-2 " (click)='CategoryValue()'>{{cat.catName}}</button>
         </div>
       </div>
 
-      <div  class="menu-tab   border border-secondary-25 m-2 rounded  shadow-sm  p-3 mb-5 bg-body rounded"  *ngFor="let cat of restaurant.cat ">
+      <div class="menu-tab   border border-secondary-25 m-2 rounded  shadow-sm  p-3 mb-5 bg-body rounded"
+        *ngFor="let cat of restaurant.cat " >
         <div class="row align-middle">
           <div class="col text-secondary p-2 text-center font-weight-bold">
 
@@ -97,7 +102,8 @@
             <button class="btn btn-warning d-inline shadow" (click)="ins(product)"><i class="fas fa-plus"></i></button>
             <p class="p-3  d-inline">{{product.qnt}}</p>
             <button class="btn btn-warning d-inline shadow" (click)="dec(product)"><i class="fas fa-minus"></i></button>
-            <input class="btn btn-warning p-2 ml-3 shadow  " type="button" (click)="addtocart(product)" value="toevoegen" />
+            <input class="btn btn-warning p-2 ml-3 shadow  " type="button" (click)="addtocart(product)"
+              value="toevoegen" />
           </div>
           <!-- <div class="col text-center mb-3">
             <img class="rounded w-75 border-secondary" [src]="cat.sideImageUrl" alt="Image">

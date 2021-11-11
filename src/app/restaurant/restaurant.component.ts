@@ -50,7 +50,9 @@ export class RestaurantComponent implements OnInit {
   komma = ","
   filteredRestaurants: Restaurant[] = [];
   restaurants: Restaurant[] = restaurantData;
+
   private _listFilter: string = '';
+
   get listFilter(): string {
     return this._listFilter;
   }
@@ -58,6 +60,7 @@ export class RestaurantComponent implements OnInit {
     this._listFilter = value;
     this.filteredRestaurants = this.categoriesFilter(value);
   }
+  
   categoriesFilter(filterBy: string): Restaurant[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.restaurants.filter((restaurant: Restaurant) =>
