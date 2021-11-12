@@ -30,24 +30,27 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
+                  "category" : "Lunch"
               },
               {
                   "id": 2,
                   "name": "BackWERK",
-                  "prijs": 10,
+                  "prijs": 9,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
+                  "category" : "Lunch"
 
               },
               {
                   "id": 3,
                   "name": "BackWERK",
-                  "prijs": 10,
+                  "prijs": 5,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
+                  "category" : "Lunch"
 
               }
           ]
@@ -59,28 +62,31 @@
             {
                 "id": 4,
                 "name": "BackWERK",
-                "prijs": 10,
+                "prijs": 7,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
+                "category" : "snack"
 
             },
             {
                 "id": 5,
                 "name": "BackWERK",
-                "prijs": 10,
+                "prijs": 6,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
+                "category" : "snack"
 
             },
             {
                 "id": 6,
                 "name": "BackWERK",
-                "prijs": 10,
+                "prijs": 2,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
+                "category" : "snack"
 
             }
         ]
@@ -92,28 +98,31 @@
           {
               "id": 7,
               "name": "BackWERK",
-              "prijs": 10,
+              "prijs": 3,
               "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
+              "category" : "Sandwiches"
 
           },
           {
               "id": 8,
               "name": "BackWERK",
-              "prijs": 10,
+              "prijs": 4,
               "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
+              "category" : "Sandwiches"
 
           },
           {
               "id": 9,
               "name": "BackWERK",
-              "prijs": 10,
+              "prijs": 8,
               "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
+              "category" : "Sandwiches"
 
           }
       ]

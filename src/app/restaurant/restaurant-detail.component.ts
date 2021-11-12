@@ -51,6 +51,7 @@ export interface Producten {
   qnt?: number
   productImageUrl?: string
   omschrijven?: string
+  category?: string
 }
 
 @Component({
@@ -62,10 +63,12 @@ export interface Producten {
 
 
 export class RestaurantDetailComponent implements OnInit {
-  searchValue2?: any;
+  // searchValue2?: any;
   restaurant!: Restaurant;
-  filteredRestaurants: Restaurant[] = [];
+
+  filteredCategories: Restaurant[] = [];
   restaurants: Restaurant[] = restaurantData;
+
   constructor(private route: ActivatedRoute,
     private router: Router,
     private auth: AuthService
@@ -76,19 +79,19 @@ export class RestaurantDetailComponent implements OnInit {
   }
   set listFilter(value: string) {
     this._listFilter = value;
-    this.filteredRestaurants = this.categoriesFilter(value);
+    this.filteredCategories = this.categoriesFilter(value);
   }
   categoriesFilter(filterBy: string): Restaurant[] {
     filterBy = filterBy.toLocaleLowerCase();
-    return this.restaurants.filter((restaurant: Restaurant) =>
-      restaurant.categories.toLocaleLowerCase().includes(filterBy));
+    return this.restaurants.filter((cat: Restaurant) =>
+    cat.categories.toLocaleLowerCase().includes(filterBy));
   }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.restaurant = restaurantData.find(r => r.id == id) ?? <Restaurant>{};
     this.cartItemFunc();
-    this.filteredRestaurants = this.restaurants;
+    this.filteredCategories = this.restaurants;
     this.listFilter = '';
   }
   onBack(): void {

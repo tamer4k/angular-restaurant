@@ -69,7 +69,7 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" >
   <div class="row menu border border-info m-2 rounded p-2 ">
     <div class="col-9 font-weight-bold">
 
@@ -96,6 +96,9 @@
             <h3 class="text-left">{{product.name}}<strong class="d-inline">€{{product.prijs}}</strong></h3>
             <div class="text-left d-block">
               <p>{{product.omschrijven}}</p>
+            </div>
+            <div class="d-block">
+              <h2>{{product.category}}</h2>
             </div>
           </div>
           <div class="col text-center">
@@ -136,3 +139,38 @@
     </div>
   </div>
 </div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+       <input type="text" [(ngModel)]='listFilter'/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" *ngFor="let restaurant of filteredCategories">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Naam</th>
+            <th scope="col">Prijs</th>
+            <th scope="col">Category</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let cat of restaurant.cat ">
+          <tr *ngFor="let product of cat.producten ">
+            <td >{{product.name}}</td>
+            <td >{{product.prijs}}</td>
+            <td >{{product.category}}</td>
+            <td >{{product.productImageUrl}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
