@@ -149,8 +149,8 @@
        <input type="text" [(ngModel)]='listFilter'/>
     </div>
   </div>
-  <div class="row">
-    <div class="col" *ngFor="let restaurant of filteredCategories">
+  <div class="row"  *ngFor="let cat of restaurant.cat ">
+    <div class="col">
       <table class="table table-striped">
         <thead>
           <tr>
@@ -160,8 +160,8 @@
             <th scope="col">Image</th>
           </tr>
         </thead>
-        <tbody *ngFor="let cat of restaurant.cat ">
-          <tr *ngFor="let product of cat.producten ">
+        <tbody >
+          <tr *ngFor="let product of cat.producten">
             <td >{{product.name}}</td>
             <td >{{product.prijs}}</td>
             <td >{{product.category}}</td>

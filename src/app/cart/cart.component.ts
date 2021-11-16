@@ -39,10 +39,11 @@ export interface Producten {
 })
 export class CartComponent implements OnInit {
   restaurant!: Restaurant;
-  BezorgdKosten: number = 0;
+  promotiecodes : number = 10;
   constructor(private auth:AuthService,private route: ActivatedRoute, private router: Router,) { }
 
   ngOnInit(): void {
+
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.restaurant = restaurantData.find(r => r.id == id) ?? <Restaurant>{};
     this.CartDetails();
@@ -84,10 +85,12 @@ export class CartComponent implements OnInit {
 
   }
   totaal: number = 0;
+  BezorgdKosten: number = 0;
+
   loadCart() {
     if (localStorage.getItem('localCart')) {
       this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '');
-      this.totaal = this.getCartDetails.reduce(function (acc: number, val: { prijs: number; qnt: number; }) {
+      this.totaal = this.getCartDetails.reduce(function (acc: number, val: { prijs: number; qnt: number; })  {
         return acc + (val.prijs * val.qnt);
       }, 0);
     }
@@ -96,6 +99,7 @@ export class CartComponent implements OnInit {
      } else{
       this.BezorgdKosten = 5;
     }
+
   }
   MyLog(mylog: any){
    console.log(mylog);

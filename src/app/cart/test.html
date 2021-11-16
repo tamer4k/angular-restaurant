@@ -1,19 +1,16 @@
-<div id="print-section" class="container mt-5" *ngIf="getCartDetails.length > 0">
+<div class="container ">
   <div class="row ">
     <div class="col-12">
       <div class="card">
         <div class="card-body p-0">
           <div class="row p-5">
             <div class="col-md-6">
-              <h1 class="logo">SnelBezorgd</h1>
-              <img src="assets/R.png" height="100" alt="CoolBrand">
+              <img src="http://via.placeholder.com/400x90?text=logo">
             </div>
 
             <div class="col-md-6 text-right">
-              <p class="font-weight-bold mb-1">Factuur {{random}}</p>
-              <p class="text-muted">{{time | date :'long'}}</p>
-
-
+              <p class="font-weight-bold mb-1">Factuur #550</p>
+              <p class="text-muted">Due to: 4 Dec, 2019</p>
             </div>
           </div>
 
@@ -41,7 +38,7 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th class="border-0 text-uppercase small font-weight-bold ">ID</th>
+                    <th class="border-0 text-uppercase small font-weight-bold">ID</th>
                     <th class="border-0 text-uppercase small font-weight-bold">Item</th>
                     <th class="border-0 text-uppercase small font-weight-bold">Aantal</th>
                     <th class="border-0 text-uppercase small font-weight-bold">Prijs</th>
@@ -49,12 +46,26 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let getCartDetail of getCartDetails">
-                    <td>{{getCartDetail.id}}</td>
-                    <td>{{getCartDetail.name}}</td>
-                    <td>{{getCartDetail.qnt}}</td>
-                    <td>€{{getCartDetail.prijs}}</td>
-                    <td>€{{getCartDetail.qnt * getCartDetail.prijs | number}}</td>
+                  <tr>
+                    <td>1</td>
+                    <td>Software</td>
+                    <td>21</td>
+                    <td>$321</td>
+                    <td>$3452</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Software</td>
+                    <td>234</td>
+                    <td>$6356</td>
+                    <td>$23423</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Software</td>
++                    <td>4534</td>
+                    <td>$354</td>
+                    <td>$23434</td>
                   </tr>
                 </tbody>
               </table>
@@ -63,51 +74,22 @@
 
           <div class="d-flex flex-row-reverse bg-dark text-white p-4">
             <div class="py-3 px-5 text-right">
-              <div class="mb-2">Totaal incl BK</div>
-              <div class="h2 font-weight-light">{{totaal + BezorgdKosten}}</div>
+              <div class="mb-2">Grand Total</div>
+              <div class="h2 font-weight-light">$234,234</div>
             </div>
 
             <div class="py-3 px-5 text-right">
-              <div class="mb-2">korting</div>
-              <div class="h2 font-weight-light">0</div>
+              <div class="mb-2">Discount</div>
+              <div class="h2 font-weight-light">10%</div>
             </div>
 
             <div class="py-3 px-5 text-right">
-              <div class="mb-2">Bezor Kosten</div>
-              <div class="h2 font-weight-light">{{BezorgdKosten}}</div>
+              <div class="mb-2">Sub - Total amount</div>
+              <div class="h2 font-weight-light">$32,432</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container text-center" *ngIf="getCartDetails == 0">
-  <div class="row p-4">
-    <div class="col pt-3">
-      <!-- <img class="text-center img-thumbnail w-25"
-        src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
-        alt=""> -->
-      <i class="fas fa-cart-plus text-secondary fa-8x"></i>
-    </div>
-  </div>
-  <div class="row  p-2">
-    <div class="col text-info">
-      <h1>Uw winkelwagen is leeg!</h1>
-      <h1>Voeg er nu een item aan toe</h1>
-      <button routerLink="/restaurants" class="btn btn-warning">Bestel nu</button>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <button class="btn btn-warning" printSectionId="print-section" ngxPrint>
-        Print
-      </button>
     </div>
   </div>
 </div>

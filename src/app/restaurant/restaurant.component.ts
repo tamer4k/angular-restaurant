@@ -23,8 +23,8 @@ interface Restaurant {
 }
 
 export interface Cat {
-  catName?: string
-  producten?: Producten[]
+  catName: string
+  producten: Producten[]
 }
 
 export interface Producten {
@@ -66,15 +66,15 @@ export class RestaurantComponent implements OnInit {
     return this.restaurants.filter((restaurant: Restaurant) =>
       restaurant.categories.toLocaleLowerCase().includes(filterBy));
   }
-  filterFavoriet(): Restaurant[] {
-    return this.restaurants.filter((restaurant: Restaurant) => restaurant.favoriet === true);
-  }
+
   ngOnInit(): void {
     this.filteredRestaurants = this.restaurants;
     this.listFilter = '';
   }
 
-
+  filterFavoriet(): Restaurant[] {
+    return this.restaurants.filter((restaurant: Restaurant) => restaurant.favoriet === true);
+  }
   allValue(): void {
     this.listFilter = '';
   }

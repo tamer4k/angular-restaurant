@@ -31,6 +31,7 @@ import { CartComponent } from './cart/cart.component';
 import { KassabonComponent } from './kassabon/kassabon.component';
 import { TestComponent } from './test/test.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
+import { NgxPrintModule } from 'ngx-print';
 
 
 // import { MapComponent } from './map/map.component';
@@ -69,6 +70,7 @@ import { SearchfilterPipe } from './searchfilter.pipe';
     NgbModule,
     HttpClientModule,
     FormsModule,
+    NgxPrintModule
 
   ],
   providers: [RestaurantService],

@@ -43,20 +43,32 @@
 
               </tr>
             </tbody>
+            <tbody class="text-secondary ">
+              <tr>
+                <td class="align-middle"></td>
+                <td class="align-middle"></td>
+                <td class="align-middle"></td>
+                <td class="align-middle"></td>
+                <td class="align-middle">Totaal: {{totaal}}</td>
+                <td class="align-middle"></td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
     </div>
     <div class="row ">
       <div class="col p-2 text-secondary">
+        <p>Promotie codes <input class="form-control w-50"  /></p>
         <p>Bestel je voor €35 of meer? Dan is de bezorging gratis!</p>
-        <h1 class="text-info">Bezorgd kosten €{{BezorgdKosten}} </h1>
-        <h1>Totaal €{{totaal + BezorgdKosten}} </h1>
+        <h1 class="text-info">Bezorgkosten €{{BezorgdKosten}} </h1>
+        <h1>Totaal inclu bezorging €{{totaal + BezorgdKosten}} </h1>
       </div>
       <div class="col">
         <button class="btn btn-light bg-danger text-white  border-secondary float-right m-2" (click)="removeAll()"><i
             class="fas fa-trash-alt text-white"></i> Verwijderen Alles</button>
             <button routerLink="/kassabon" class="btn btn-dark float-right m-2"><i class="fas fa-file-invoice-dollar"></i> Kassabon</button>
+
       </div>
     </div>
   </div>
