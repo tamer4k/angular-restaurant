@@ -37,6 +37,7 @@ import { NgxPrintModule } from 'ngx-print';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { GooglemapComponent } from './googlemap/googlemap.component';
 // import { MapComponent } from './map/map.component';
+import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { GooglemapComponent } from './googlemap/googlemap.component';
     HttpClientModule,
     FormsModule,
     NgxPrintModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    RatingModule 
 
   ],
   providers: [

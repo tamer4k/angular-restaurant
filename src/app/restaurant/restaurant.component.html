@@ -59,21 +59,20 @@
             {{ restaurant.bezorgdKosten }}
             bezorgd kosten
           </p>
-          <p class="card-text">
-            <i class="fas fa-star"></i>
-            {{ restaurant.starRating }}
+          <div class="card-text">
+            <!-- <i class="fas fa-star"></i> -->
+            <!-- {{ restaurant.starRating }} -->
+            <star-rating [value]="3" [totalstars]="5" checkedcolor="#ff7300" uncheckedcolor="#16161680" size="24px" [readonly]="false" (rate)="onRate($event)"></star-rating>
+            <pre><b>{{value }}</b>(2132)</pre>
 
-            ( 2132 )
-          </p>
-          <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
-          <pre>starRating: <b>{{starRating}}</b></pre>
-          <!-- <ngb-rating [(rate)]="starRating">
-            <ng-template let-fill="fill" let-index="index">
-              <span class="star" [class.filled]="fill === 100" [class.bad]="index < 5">&#9733;</span>
-            </ng-template>
-          </ngb-rating>
-          <hr>
+          </div>
+          <!------------------------------------------------------------->
+          <!-- <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
           <pre>starRating: <b>{{starRating}}</b></pre> -->
+          <!------------------------------------------------------------->
+          <!-- <star-rating [value]="3" [totalstars]="5" checkedcolor="#ff7300" uncheckedcolor="black" size="24px" [readonly]="false" (rate)="onRate($event)"></star-rating>
+          <pre><b>{{value}}</b></pre> -->
+          <!------------------------------------------------------------->
           <a class=" btn btn-warning btn-block text-dark" mat-list-item href="#"
             routerLink="/restaurants/{{restaurant.id}}" routerLinkActive="active">Bestellen</a>
         </div>

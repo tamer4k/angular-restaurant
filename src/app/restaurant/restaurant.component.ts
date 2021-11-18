@@ -6,7 +6,8 @@ import { getValueInRange } from '@ng-bootstrap/ng-bootstrap/util/util';
 import { getConstantValue } from 'typescript';
 // import { Route } from '@angular/router';
 import restaurantData from '../restaurants.json';
-
+import { StarRatingComponent } from 'ng-starrating';
+import { ActivatedRoute, Router } from '@angular/router';
 /**/
 
 /* */
@@ -43,25 +44,19 @@ export interface Producten {
 
 })
 
-
-
-
-
 export class RestaurantComponent implements OnInit {
-  constructor()
-  {
 
+  constructor(private route: ActivatedRoute,
+    private router: Router,) {
 
   }
 
-
-  searchValue? : any ;
+  public restaurantElements: Array<Restaurant> = [];
+  searchValue?: any;
   komma = ","
   filteredRestaurants: Restaurant[] = [];
-  restaurants: Restaurant[]  = restaurantData;
-  starRating = 3.3 ;
+  restaurants: Restaurant[] = restaurantData;
   private _listFilter: string = '';
-
   get listFilter(): string {
     return this._listFilter;
   }
@@ -80,6 +75,7 @@ export class RestaurantComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
+
       this.filteredRestaurants = this.restaurants;
       this.listFilter = '';
     }, -2000);
@@ -105,8 +101,10 @@ export class RestaurantComponent implements OnInit {
 
   }
 
-
-
-
+  value = 3.2;
+  public onRate($event: { oldValue: number, newValue: number, starRating: StarRatingComponent }) {
+    // alert(`${$event.oldValue},${$event.newValue},`);
+    this.value = $event.newValue;
+  }
 }
 
