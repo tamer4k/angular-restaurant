@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { Error404Component } from './errors/404.component';
 import { HomeComponent } from './home/home.component';
 import { KassabonComponent } from './kassabon/kassabon.component';
+import { MapComponent } from './map/map.component';
 import { RestaurantDetailComponent } from './restaurant/restaurant-detail.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 
@@ -17,6 +18,8 @@ export const appRoutes: Routes = [
   {path: '404', component: Error404Component},
   {path: 'cart', component: CartComponent},
   {path: 'kassabon', component: KassabonComponent},
+  {path: 'map', component: MapComponent},
+
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 

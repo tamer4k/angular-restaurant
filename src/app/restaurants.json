@@ -22,7 +22,6 @@
     "cat": [
       {
           "catName": "Lunch",
-          "sideImageUrl": "assets/images/menu-burger-img.jpg",
           "producten": [
               {
                   "id": 1,
@@ -57,7 +56,6 @@
       },
       {
           "catName": "snack",
-          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
                 "id": 4,
@@ -93,7 +91,6 @@
       },
       {
         "catName": "Sandwiches",
-        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
               "id": 7,
@@ -152,7 +149,6 @@
     "cat": [
       {
           "catName": "Italian pizza",
-          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
               {
                   "id": 10,
@@ -185,7 +181,6 @@
       },
       {
           "catName": "Greek",
-          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
                 "id": 13,
@@ -218,7 +213,6 @@
       },
       {
         "catName": "Gyros",
-        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
               "id": 16,
@@ -274,7 +268,6 @@
     "cat": [
       {
           "catName": "Sushi",
-          "sideImageUrl": "assets/images/menu-burger-img.jpg",
           "producten": [
               {
                   "id": 19,
@@ -307,7 +300,6 @@
       },
       {
           "catName": "Poke bowl",
-          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
                 "id": 22,
@@ -340,7 +332,6 @@
       },
       {
         "catName": "Japanese",
-        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
               "id": 25,
@@ -396,7 +387,6 @@
     "cat": [
       {
           "catName": "Salads",
-          "sideImageUrl": "assets/images/menu-burger-img.jpg",
           "producten": [
               {
                   "id": 28,
@@ -429,7 +419,6 @@
       },
       {
           "catName": "Lunch",
-          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
                 "id": 31,
@@ -462,7 +451,6 @@
       },
       {
         "catName": "Sandwiches",
-        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
               "id": 34,
@@ -518,7 +506,6 @@
     "cat": [
       {
           "catName": "Burgers",
-          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
               {
                   "id": 37,
@@ -551,7 +538,6 @@
       },
       {
           "catName": "Chicken",
-          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
                 "id": 40,
@@ -584,7 +570,6 @@
       },
       {
         "catName": "Fries",
-        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
               "id": 43,
@@ -640,7 +625,6 @@
     "cat": [
       {
           "catName": "Pizza",
-          "sideImageUrl": "assets/images/menu-burger-img.jpg",
           "producten": [
               {
                   "id": 46,
@@ -673,7 +657,6 @@
       },
       {
           "catName": "Snacks",
-          "sideImageUrl": "assets/images/menu-snack-img.jpg",
           "producten": [
             {
                 "id": 49,
@@ -705,7 +688,6 @@
       },
       {
         "catName": "Sandwiches",
-        "sideImageUrl": "assets/images/menu-beverage-img.jpg",
         "producten": [
           {
               "id": 52,

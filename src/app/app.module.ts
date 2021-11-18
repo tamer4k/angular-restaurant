@@ -16,7 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { MapComponent } from './map/map.component';
 import { RestaurantDetailComponent } from './restaurant/restaurant-detail.component';
@@ -32,8 +32,10 @@ import { KassabonComponent } from './kassabon/kassabon.component';
 import { TestComponent } from './test/test.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
 import { NgxPrintModule } from 'ngx-print';
-
-
+// import {MatProgressBarModule} from '@angular/material/progress-bar';
+// import { MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { GooglemapComponent } from './googlemap/googlemap.component';
 // import { MapComponent } from './map/map.component';
 
 @NgModule({
@@ -51,6 +53,7 @@ import { NgxPrintModule } from 'ngx-print';
     KassabonComponent,
     TestComponent,
     SearchfilterPipe,
+    GooglemapComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{ enableTracing: true }),
@@ -70,10 +73,13 @@ import { NgxPrintModule } from 'ngx-print';
     NgbModule,
     HttpClientModule,
     FormsModule,
-    NgxPrintModule
+    NgxPrintModule,
+    NgxSpinnerModule
 
   ],
-  providers: [RestaurantService],
+  providers: [
+
+    RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

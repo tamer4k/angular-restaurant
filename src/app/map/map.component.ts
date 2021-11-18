@@ -4,11 +4,11 @@ import * as L from 'leaflet';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
 
-
+  public map!: L.Map;
   private centroid: L.LatLngExpression = [52.6305, 4.7643]; //
 
   private initMap(): void {
@@ -22,7 +22,6 @@ export class MapComponent implements OnInit {
       minZoom: 10,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
-
 
     // create 5 random jitteries and add them to map
     const jittery = Array(5).fill(this.centroid).map(

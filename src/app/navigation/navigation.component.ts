@@ -20,7 +20,9 @@ export class NavigationComponent {
     );
  public amount: number = 0;
 
-  constructor(private breakpointObserver: BreakpointObserver, private auth: AuthService) {
+  constructor(private breakpointObserver: BreakpointObserver,
+             private auth: AuthService,
+             ) {
     this.auth.cartSubject.subscribe((data)=>{
       console.log(data);
       const numberOfItem = this.cartItem = data;

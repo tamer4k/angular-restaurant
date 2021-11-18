@@ -12,6 +12,8 @@
       <a mat-list-item href="#" routerLink="/home" routerLinkActive="active"><i class="fas fa-home text-warning pl-3 mb-1 fa-1x pr-2"></i>Home</a>
       <a mat-list-item href="#" routerLink="/restaurants" routerLinkActive="active"><i class="fas fa-utensils text-warning pl-3 mb-1 fa-1x pr-2"></i>Alle restaurants</a>
       <a mat-list-item href="#" routerLink="/contact" routerLinkActive="active"><i class="fas fa-id-card text-warning pl-3 mb-1 fa-1x pr-2"></i> Contact</a>
+      <!-- <a mat-list-item href="#" routerLink="/map" routerLinkActive="active"><i class="fas fa-id-card text-warning pl-3 mb-1 fa-1x pr-2"></i> Map</a> -->
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-card-header>
@@ -30,8 +32,12 @@
     </div>
   </mat-card-header>
   <mat-card-content>
+
     <!-- Add Content Here -->
-    <router-outlet></router-outlet>
+    <router-outlet>
+
+     
+    </router-outlet>
   </mat-card-content>
   <mat-grid-tile-footer>
     <app-footer></app-footer>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { GooglemapComponent } from '../googlemap/googlemap.component';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  spinnerType: string;
+  spinnerName: string;
+
+  constructor(private spinner: NgxSpinnerService,
+
+    ) {
+    this.spinnerName = 'sp1';
+    this.spinnerType = 'ball-clip-rotate-multiple'
+    this.spinner.show(this.spinnerName,{bdColor: "rgba(0, 0, 0, 0.7)"});
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide(this.spinnerName);
+    }, 2000);
+  }
 
   ngOnInit(): void {
+
   }
 
 }

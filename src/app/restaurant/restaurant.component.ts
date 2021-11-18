@@ -67,9 +67,13 @@ export class RestaurantComponent implements OnInit {
       restaurant.categories.toLocaleLowerCase().includes(filterBy));
   }
 
+
+
   ngOnInit(): void {
-    this.filteredRestaurants = this.restaurants;
-    this.listFilter = '';
+    setTimeout(() => {
+      this.filteredRestaurants = this.restaurants;
+      this.listFilter = '';
+    }, -2000);
   }
 
   filterFavoriet(): Restaurant[] {

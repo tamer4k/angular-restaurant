@@ -39,9 +39,9 @@ export interface Producten {
 })
 export class KassabonComponent implements OnInit {
   restaurant!: Restaurant;
-  todayString : string = new Date().toDateString();
+  todayString: string = new Date().toDateString();
   time = new Date();
-  constructor(private auth:AuthService,private route: ActivatedRoute, private router: Router,) { }
+  constructor(private auth: AuthService, private route: ActivatedRoute, private router: Router,) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -66,17 +66,19 @@ export class KassabonComponent implements OnInit {
         return acc + (val.prijs * val.qnt);
       }, 0);
     }
-    if(this.totaal >= 35 || this.getCartDetails == 0){
+    if (this.totaal >= 35 || this.getCartDetails == 0) {
       this.BezorgdKosten = 0;
-     } else{
+    } else {
       this.BezorgdKosten = 5;
     }
   }
   random: any;
-   max = 98765432
-   findRandom() {
+  max = 98765432
+  findRandom() {
     this.random = Math.floor(Math.random() * this.max)
   }
-
+  removeAll() {
+    localStorage.removeItem('localCart');
+  }
 
 }

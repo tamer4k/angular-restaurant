@@ -11,8 +11,13 @@ export class HomeComponent implements OnInit {
   constructor(private restaurantService: RestaurantService) { }
 
   ngOnInit(): void {
-    this.restaurants = this.restaurantService.getRestaurants()
+    setTimeout(() => { }, 3000);
+    this.restaurants = this.restaurantService.getRestaurants();
+
   }
+
+
+
 }
 
 
