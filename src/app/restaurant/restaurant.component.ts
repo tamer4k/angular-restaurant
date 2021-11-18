@@ -1,6 +1,9 @@
 // import { state } from '@angular/animations';
 // import { DeclarationListEmitMode } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import { getValueInRange } from '@ng-bootstrap/ng-bootstrap/util/util';
+import { getConstantValue } from 'typescript';
 // import { Route } from '@angular/router';
 import restaurantData from '../restaurants.json';
 
@@ -45,12 +48,18 @@ export interface Producten {
 
 
 export class RestaurantComponent implements OnInit {
-  constructor() { }
+  constructor()
+  {
+
+
+  }
+
+
   searchValue? : any ;
   komma = ","
   filteredRestaurants: Restaurant[] = [];
   restaurants: Restaurant[]  = restaurantData;
-
+  starRating = 3.3 ;
   private _listFilter: string = '';
 
   get listFilter(): string {

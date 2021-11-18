@@ -26,7 +26,7 @@
               {
                   "id": 1,
                   "name": "BackWERK",
-                  "prijs": 10,
+                  "prijs": 10.50,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
@@ -35,7 +35,7 @@
               {
                   "id": 2,
                   "name": "BackWERK",
-                  "prijs": 9,
+                  "prijs": 9.80,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
@@ -45,7 +45,7 @@
               {
                   "id": 3,
                   "name": "BackWERK",
-                  "prijs": 5,
+                  "prijs": 5.66,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
                   "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
@@ -60,7 +60,7 @@
             {
                 "id": 4,
                 "name": "BackWERK",
-                "prijs": 7,
+                "prijs": 7.82,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
@@ -70,7 +70,7 @@
             {
                 "id": 5,
                 "name": "BackWERK",
-                "prijs": 6,
+                "prijs": 6.32,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
@@ -80,7 +80,7 @@
             {
                 "id": 6,
                 "name": "BackWERK",
-                "prijs": 2,
+                "prijs": 2.77,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
                 "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
@@ -95,7 +95,7 @@
           {
               "id": 7,
               "name": "BackWERK",
-              "prijs": 3,
+              "prijs": 3.41,
               "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
@@ -105,7 +105,7 @@
           {
               "id": 8,
               "name": "BackWERK",
-              "prijs": 4,
+              "prijs": 4.63,
               "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
@@ -115,7 +115,7 @@
           {
               "id": 9,
               "name": "BackWERK",
-              "prijs": 8,
+              "prijs": 8.69,
               "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
               "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",

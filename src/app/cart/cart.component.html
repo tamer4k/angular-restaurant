@@ -25,7 +25,7 @@
                 <td class="align-middle"><img [src]="getCartDetail.productImageUrl" class=" w-25 rounded-circle"
                     alt="Image"></td>
                 <td class="align-middle">{{getCartDetail.name}}</td>
-                <td class="align-middle">€ {{getCartDetail.prijs}}</td>
+                <td class="align-middle"> {{getCartDetail.prijs | currency:'EUR':true}}</td>
                 <td class="align-middle">
                   <button class="btn btn-light d-inline border-secondary"
                     (click)="incQnt(getCartDetail.id, getCartDetail.qnt)"><i class="fas fa-plus  text-secondary"></i>
@@ -35,7 +35,7 @@
                     (click)="decQnt(getCartDetail.id, getCartDetail.qnt)"><i
                       class="fas fa-minus text-secondary"></i></button>
                 </td>
-                <td class="align-middle">€{{getCartDetail.qnt * getCartDetail.prijs | number}}</td>
+                <td class="align-middle">{{getCartDetail.qnt * getCartDetail.prijs | currency:'EUR':true}}</td>
                 <td class="align-middle">
                   <button class=" border-0 btn btn-outline-secondary" (click)="singleDelete(getCartDetail.id)"><i
                       class="fas fa-trash-alt fa-2x text-danger "></i></button>
@@ -49,7 +49,7 @@
                 <td class="align-middle"></td>
                 <td class="align-middle"></td>
                 <td class="align-middle"></td>
-                <td class="align-middle">Totaal: {{totaal}}</td>
+                <td class="align-middle">Totaal: {{totaal | currency:'EUR':true}}</td>
                 <td class="align-middle"></td>
               </tr>
             </tbody>
@@ -62,7 +62,7 @@
         <p>Promotie codes <input class="form-control w-50"  /></p>
         <p>Bestel je voor €35 of meer? Dan is de bezorging gratis!</p>
         <h1 class="text-info">Bezorgkosten €{{BezorgdKosten}} </h1>
-        <h1>Totaal inclu bezorging €{{totaal + BezorgdKosten}} </h1>
+        <h1>Totaal inclu bezorging {{totaal + BezorgdKosten | currency:'EUR':true}} </h1>
       </div>
       <div class="col">
         <button class="btn btn-light bg-danger text-white  border-secondary float-right m-2" (click)="removeAll()"><i

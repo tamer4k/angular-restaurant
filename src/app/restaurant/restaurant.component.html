@@ -9,7 +9,7 @@
 <div class="container">
   <div class="row">
     <div class="col ">
-      <input type="text" [(ngModel)]='listFilter' hidden  />
+      <input type="text" [(ngModel)]='listFilter' hidden />
       <button class="btn btn-dark m-2 active" (click)='allValue()'>Alles</button>
       <button class="btn btn-dark m-2" (click)='lunchValue()'>Lunch</button>
       <button class="btn btn-dark m-2" (click)='pizzaValue()'>Pizza</button>
@@ -62,8 +62,18 @@
           <p class="card-text">
             <i class="fas fa-star"></i>
             {{ restaurant.starRating }}
+
             ( 2132 )
           </p>
+          <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+          <pre>starRating: <b>{{starRating}}</b></pre>
+          <!-- <ngb-rating [(rate)]="starRating">
+            <ng-template let-fill="fill" let-index="index">
+              <span class="star" [class.filled]="fill === 100" [class.bad]="index < 5">&#9733;</span>
+            </ng-template>
+          </ngb-rating>
+          <hr>
+          <pre>starRating: <b>{{starRating}}</b></pre> -->
           <a class=" btn btn-warning btn-block text-dark" mat-list-item href="#"
             routerLink="/restaurants/{{restaurant.id}}" routerLinkActive="active">Bestellen</a>
         </div>
