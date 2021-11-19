@@ -8,6 +8,7 @@ import { getConstantValue } from 'typescript';
 import restaurantData from '../restaurants.json';
 import { StarRatingComponent } from 'ng-starrating';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ExpressionBinding } from '@angular/compiler';
 /**/
 
 /* */
@@ -15,7 +16,7 @@ declare let toastr: any
 interface Restaurant {
   id: Number
   restaurantName: String
-  starRating: Number
+  starRating: number
   categories: String
   tijdBezorgd: Number
   minBestellen: Number
@@ -81,6 +82,23 @@ export class RestaurantComponent implements OnInit {
     }, -2000);
   }
 
+  public valuee!: number;
+
+selecteets(){
+  const res = restaurantData;
+  for(let i = 0; i < res.length; i++){
+    const eenresturants = res[i].starRating;
+    let eending = eenresturants;
+    this.valuee = eending;
+
+    console.log(this.valuee);
+  }
+  console.log(this.valuee);
+  return this.valuee;
+
+
+
+}
   filterFavoriet(): Restaurant[] {
     return this.restaurants.filter((restaurant: Restaurant) => restaurant.favoriet === true);
   }
@@ -100,11 +118,12 @@ export class RestaurantComponent implements OnInit {
     this.filteredRestaurants = this.filterFavoriet();
 
   }
-
-  value = 3.2;
+starRating = 2
+public valuestart = this.selecteets();
   public onRate($event: { oldValue: number, newValue: number, starRating: StarRatingComponent }) {
-    // alert(`${$event.oldValue},${$event.newValue},`);
-    this.value = $event.newValue;
+    // alert(`${$event.oldValue},${$event.newValue}`);
+
+    this.valuestart;
   }
 }
 
