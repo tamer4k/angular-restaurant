@@ -16,7 +16,7 @@ declare let toastr: any
 interface Restaurant {
   id: Number
   restaurantName: String
-  starRating: number
+  starRating: Number
   categories: String
   tijdBezorgd: Number
   minBestellen: Number
@@ -82,23 +82,19 @@ export class RestaurantComponent implements OnInit {
     }, -2000);
   }
 
-  public valuee!: number;
+public valrating : number[] = [];
 
-selecteets(){
-  const res = restaurantData;
-  for(let i = 0; i < res.length; i++){
-    const eenresturants = res[i].starRating;
-    let eending = eenresturants;
-    this.valuee = eending;
-
-    console.log(this.valuee);
-  }
-  console.log(this.valuee);
-  return this.valuee;
+// selecteets(){
+//   const res = restaurantData;
+//   for(let i = 0; i < res.length; i++){
+//     let eenresturants = res[i].starRating;
+//     let newrating = this.valrating.push(eenresturants);
 
 
-
-}
+//     console.log(newrating);
+//     return newrating;
+//   }
+// }
   filterFavoriet(): Restaurant[] {
     return this.restaurants.filter((restaurant: Restaurant) => restaurant.favoriet === true);
   }
@@ -119,11 +115,11 @@ selecteets(){
 
   }
 starRating = 2
-public valuestart = this.selecteets();
+// public valuestart = this.selecteets();
   public onRate($event: { oldValue: number, newValue: number, starRating: StarRatingComponent }) {
     // alert(`${$event.oldValue},${$event.newValue}`);
 
-    this.valuestart;
+    // this.valuestart;
   }
 }
 
