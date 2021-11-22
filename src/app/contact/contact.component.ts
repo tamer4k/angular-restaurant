@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.spinner.hide(this.spinnerName);
-    }, 2000);
+    }, 1000);
   }
 
   ngOnInit(): void {

@@ -64,8 +64,7 @@
             <pre><b>{{ restaurant.starRating }}</b>(2132)</pre>
           </div>
           <!------------------------------------------------------------->
-          <ngb-rating [max]="5" [rate]="restaurant.starRating.valueOf()" [readonly]="false"></ngb-rating>
-          <pre>starRating: <b>{{starRating}}</b></pre>
+
           <!------------------------------------------------------------->
           <a class=" btn btn-warning btn-block text-dark" mat-list-item href="#"
             routerLink="/restaurants/{{restaurant.id}}" routerLinkActive="active">Bestellen</a>
