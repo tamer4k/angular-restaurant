@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import restaurantData from '../restaurants.json';
 import { AuthService } from '../shared/auth.service';
-
 // import { CartService } from '../shared/cart.service';
 declare let toastr: any
 interface Restaurant {

@@ -93,7 +93,7 @@
             <img [src]="product.productImageUrl" class=" rounded-circle w-50" alt="Image">
           </div>
           <div class="menu-text col text-center">
-            <h3 class="text-left">{{product.name}}<strong class="d-inline">{{product.prijs | currency:'EUR':true}}</strong></h3>
+            <h3 class="text-left">{{product.name}}<strong class="d-inline">{{product.prijs | currency:'EUR':'symbol':'1.2-2':'nl'}}</strong></h3>
             <div class="text-left d-block">
               <p>{{product.omschrijven}}</p>
             </div>
@@ -148,7 +148,7 @@
      <input type="text" [(ngModel)]='listFilter'/>
   </div>
 </div>
-<div class="container" *ngFor="let restaurant of filteredCategories">
+<div class="container" *ngFor="let restaurant of restaurants | searchfilter:searchValue2;">
 
   <div class="row"  *ngFor="let cat of restaurant.cat ">
     <div class="col">

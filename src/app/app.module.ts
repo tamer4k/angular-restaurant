@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -38,7 +38,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { GooglemapComponent } from './googlemap/googlemap.component';
 // import { MapComponent } from './map/map.component';
 import { RatingModule } from 'ng-starrating';
-
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/nl';
+registerLocaleData(localeFr, 'nl');
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,12 +78,20 @@ import { RatingModule } from 'ng-starrating';
     FormsModule,
     NgxPrintModule,
     NgxSpinnerModule,
-    RatingModule 
+    RatingModule
 
   ],
-  providers: [
+  providers: [RestaurantService,
+    {
+    provide: LOCALE_ID,
+    useValue: 'nl-NL'
+  },
+],
 
-    RestaurantService],
+  // providers: [
+
+  //   RestaurantService
+  // ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
