@@ -17,7 +17,7 @@ interface Restaurant {
   favoriet: boolean
   contact?: Contact[]
   openingstijden?: Openingstijden[]
-  cat?: Cat[]
+  cat: Cat[]
 
 }
 
@@ -40,8 +40,7 @@ export interface Openingstijden {
 
 export interface Cat {
   catName?: string
-  sideImageUrl?: string,
-  producten?: Producten[]
+  producten: Producten[]
 }
 
 export interface Producten {
@@ -63,29 +62,42 @@ export interface Producten {
 
 
 export class RestaurantDetailComponent implements OnInit {
-  // searchValue2?: any;
+   searchValue2?: any;
   restaurant!: Restaurant;
 
   filteredCategories: Restaurant[] = [];
   restaurants: Restaurant[] = restaurantData;
 
+
+
   constructor(private route: ActivatedRoute,
     private router: Router,
     private auth: AuthService
-  ) { }
+  ) {
+
+    this.filteredCategories = this.restaurants;
+    this._listFilter= 'foo-bar';
+  }
   private _listFilter: string = '';
   get listFilter(): string {
     return this._listFilter;
   }
   set listFilter(value: string) {
     this._listFilter = value;
-    this.filteredCategories = this.categoriesFilter(value);
+    //  this.filteredCategories = this.categoriesFilter(value);
+    this.filteredCategories = this._listFilter? this.categoriesFilter(this._listFilter) : this.restaurants;
+
   }
   categoriesFilter(filterBy: string): Restaurant[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.restaurants.filter((cat: Restaurant) =>
     cat.categories.toLocaleLowerCase().includes(filterBy));
   }
+//   performFilter(filterBy: string): any[] {
+//     filterBy = filterBy.toLocaleLowerCase();
+//     return this.products.filter((product: any) =>
+//         product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+// }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));

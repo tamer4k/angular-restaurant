@@ -49,23 +49,23 @@ export interface Producten {
   qnt?: number
   productImageUrl?: string
   omschrijven?: string
-  category?: string
+  category: string
 }
 @Pipe({
-  name: 'searchfilter'
+  name: 'searchfilter2'
 })
 export class SearchfilterPipe implements PipeTransform {
 
-  transform(Restaurants: Restaurant[], searchValue: string): Restaurant[] {
-    if (!Restaurants || ! searchValue){
-      return Restaurants;
+  transform(Productens: Producten[], searchValue2: string): Producten[] {
+    if (!Productens || ! searchValue2){
+      return Productens;
     }
 
-    return Restaurants.filter(cat =>
-      cat.restaurantName.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ||
-      cat.categories.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ||
-      cat.starRating.toString().toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ||
-      cat.minBestellen.toString().toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+    return Productens.filter(cat =>
+      cat.category.toLocaleLowerCase().includes(searchValue2.toLocaleLowerCase())
+      // cat.categories.toLocaleLowerCase().includes(searchValue2.toLocaleLowerCase()) ||
+      // cat.starRating.toString().toLocaleLowerCase().includes(searchValue2.toLocaleLowerCase()) ||
+      // cat.minBestellen.toString().toLocaleLowerCase().includes(searchValue2.toLocaleLowerCase())
 
 
       );

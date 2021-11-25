@@ -141,14 +141,15 @@
 </div>
 
 
+<input type="text" [(ngModel)]='searchValue2' />
 
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-       <input type="text" [(ngModel)]='listFilter'/>
-    </div>
+<div class="row">
+  <div class="col">
+     <input type="text" [(ngModel)]='listFilter'/>
   </div>
+</div>
+<div class="container" *ngFor="let restaurant of filteredCategories">
+
   <div class="row"  *ngFor="let cat of restaurant.cat ">
     <div class="col">
       <table class="table table-striped">
@@ -161,7 +162,7 @@
           </tr>
         </thead>
         <tbody >
-          <tr *ngFor="let product of cat.producten">
+          <tr *ngFor="let product of cat.producten ">
             <td >{{product.name}}</td>
             <td >{{product.prijs}}</td>
             <td >{{product.category}}</td>
