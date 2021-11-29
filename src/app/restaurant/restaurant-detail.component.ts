@@ -64,8 +64,8 @@ export class RestaurantDetailComponent implements OnInit {
    searchValue2?: any;
   restaurant!: Restaurant;
 
-  filteredCategories: Restaurant[] = [];
-  restaurants: Restaurant[] = restaurantData;
+  filteredCategories: Cat[] = [];
+  // restaurants: Cat[] = restaurantData;
 
 
 
@@ -73,10 +73,7 @@ export class RestaurantDetailComponent implements OnInit {
     private router: Router,
     private auth: AuthService
   ) {
-
-    this.filteredCategories = this.restaurants;
-    this._listFilter= 'foo-bar';
-  }
+}
   private _listFilter: string = '';
   get listFilter(): string {
     return this._listFilter;
@@ -84,13 +81,13 @@ export class RestaurantDetailComponent implements OnInit {
   set listFilter(value: string) {
     this._listFilter = value;
     //  this.filteredCategories = this.categoriesFilter(value);
-    this.filteredCategories = this._listFilter? this.categoriesFilter(this._listFilter) : this.restaurants;
+    this.filteredCategories = this._listFilter? this.categoriesFilter(this._listFilter) : this.restaurant.cat;
 
   }
-  categoriesFilter(filterBy: string): Restaurant[] {
+  categoriesFilter(filterBy: string): Cat[] {
     filterBy = filterBy.toLocaleLowerCase();
-    return this.restaurants.filter((cat: Restaurant) =>
-    cat.categories.toLocaleLowerCase().includes(filterBy));
+    return this.restaurant.cat.filter((cat: Cat) =>
+    cat.catName?.toLocaleLowerCase().includes(filterBy));
   }
 //   performFilter(filterBy: string): any[] {
 //     filterBy = filterBy.toLocaleLowerCase();
@@ -102,7 +99,7 @@ export class RestaurantDetailComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.restaurant = restaurantData.find(r => r.id == id) ?? <Restaurant>{};
     this.cartItemFunc();
-    this.filteredCategories = this.restaurants;
+    // this.filteredCategories = this.restaurants;
     this.listFilter = '';
   }
   onBack(): void {
@@ -171,8 +168,8 @@ export class RestaurantDetailComponent implements OnInit {
   allValue(): void {
     this.listFilter = '';
   }
-  CategoryValue(): void {
-    this.listFilter = 'Greek';
+  CategoryValue(value :any): void {
+    this.listFilter = value;
   }
 
 }

@@ -29,8 +29,7 @@
                   "prijs": 10.50,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
               },
               {
                   "id": 2,
@@ -38,8 +37,7 @@
                   "prijs": 9.80,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               },
               {
@@ -48,8 +46,7 @@
                   "prijs": 5.66,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
               }
           ]
@@ -63,8 +60,7 @@
                 "prijs": 7.82,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "snack"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             },
             {
@@ -73,8 +69,8 @@
                 "prijs": 6.32,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "snack"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -83,8 +79,8 @@
                 "prijs": 2.77,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-snack.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "snack"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             }
         ]
@@ -98,8 +94,8 @@
               "prijs": 3.41,
               "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Sandwiches"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -108,8 +104,8 @@
               "prijs": 4.63,
               "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Sandwiches"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -118,8 +114,8 @@
               "prijs": 8.69,
               "qnt":1,
               "productImageUrl": "assets/images/menu-beverage.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Sandwiches"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           }
       ]
@@ -156,8 +152,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -166,8 +162,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -176,8 +172,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               }
           ]
@@ -191,8 +187,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -201,8 +197,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -211,8 +207,7 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
             }
         ]
@@ -226,8 +221,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -236,8 +231,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -246,8 +241,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           }
       ]
@@ -284,8 +279,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -294,8 +289,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -304,8 +299,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               }
           ]
@@ -319,8 +314,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -329,8 +324,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -339,8 +334,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             }
         ]
@@ -354,8 +349,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -364,8 +359,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -374,8 +369,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           }
       ]
@@ -412,8 +407,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -422,8 +417,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -432,8 +427,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               }
           ]
@@ -447,8 +442,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -457,8 +452,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -467,8 +462,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             }
         ]
@@ -482,8 +477,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -491,8 +486,8 @@
               "name": "p2",
               "prijs": 10,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -501,8 +496,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           }
       ]
@@ -540,8 +535,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -550,8 +545,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -560,8 +555,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               }
           ]
@@ -575,8 +570,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -585,8 +580,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -595,8 +590,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             }
         ]
@@ -610,8 +605,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -620,8 +615,7 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
 
           },
           {
@@ -630,8 +624,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           }
       ]
@@ -668,8 +662,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -678,8 +672,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               },
               {
@@ -688,8 +682,8 @@
                   "prijs": 10,
                   "qnt":1,
                   "productImageUrl": "assets/images/menu-burger.jpg",
-                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                  "category" : "Lunch"
+                  "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
               }
           ]
@@ -703,8 +697,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -712,8 +706,8 @@
                 "name": "p2",
                 "prijs": 10,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             },
             {
@@ -722,8 +716,8 @@
                 "prijs": 10,
                 "qnt":1,
                 "productImageUrl": "assets/images/menu-burger.jpg",
-                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-                "category" : "Lunch"
+                "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
             }
         ]
@@ -737,8 +731,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -747,8 +741,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           },
           {
@@ -757,8 +751,8 @@
               "prijs": 10,
               "qnt":1,
               "productImageUrl": "assets/images/menu-burger.jpg",
-              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
-              "category" : "Lunch"
+              "omschrijven" : "Lorem ipsum dolor sit amet elit. Phasel nec preti facil"
+
 
           }
       ]
