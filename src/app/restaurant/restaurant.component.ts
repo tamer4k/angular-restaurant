@@ -23,18 +23,19 @@ interface Restaurant {
   bezorgdKosten: Number
   restaurantImageUrl: String
   favoriet: boolean
-  cat?: Cat[]
-
-}
-
-export interface Cat {
-  catName: string
   producten: Producten[]
+
 }
 
-export interface Producten {
+
+ interface Producten {
   id: number
   name: string
+  prijs: number
+  qnt: number
+  productImageUrl: string
+  omschrijven: string
+  category: string
 }
 
 
@@ -84,17 +85,6 @@ export class RestaurantComponent implements OnInit {
 
 public valrating : number[] = [];
 
-// selecteets(){
-//   const res = restaurantData;
-//   for(let i = 0; i < res.length; i++){
-//     let eenresturants = res[i].starRating;
-//     let newrating = this.valrating.push(eenresturants);
-
-
-//     console.log(newrating);
-//     return newrating;
-//   }
-// }
   filterFavoriet(): Restaurant[] {
     return this.restaurants.filter((restaurant: Restaurant) => restaurant.favoriet === true);
   }
@@ -115,7 +105,6 @@ public valrating : number[] = [];
 
   }
 starRating = 2
-// public valuestart = this.selecteets();
   public onRate($event: { oldValue: number, newValue: number, starRating: StarRatingComponent }) {
     // alert(`${$event.oldValue},${$event.newValue}`);
 

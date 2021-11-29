@@ -72,23 +72,24 @@
 <div class="container-fluid" >
   <div class="row menu border border-info m-2 rounded p-2 ">
     <div class="col-9 font-weight-bold">
-
+      <input type="text" [(ngModel)]='listFilter'/>
       <div class="row ">
+
         <button class="btn btn-outline-dark m-2" (click)='allValue()'>Alle</button>
-        <div class="col " *ngFor="let cat of restaurant.cat ">
-          <button class="btn btn-outline-dark m-2 " (click)='CategoryValue()'>{{cat.catName}}</button>
+        <div class="col ">
+          <button  class="btn btn-outline-dark m-2 " (click)='CategoryValue()' value="">{{restaurant.categories}}</button>
         </div>
       </div>
 
       <div class="menu-tab   border-0 border-secondary-25 m-2 rounded  shadow-sm  p-3 mb-5 bg-body rounded"
-        *ngFor="let cat of restaurant.cat " >
+        >
         <div class="row align-middle">
           <div class="col text-secondary p-2 text-center font-weight-bold">
 
-            <h2>{{cat.catName}}</h2>
+
           </div>
         </div>
-        <div class="row " *ngFor="let product of cat.producten ">
+        <div class="row " *ngFor="let product of filteredProducts ">
           <div class="col-2 mb-3  text-center">
             <img [src]="product.productImageUrl" class=" rounded-circle w-50" alt="Image">
           </div>
@@ -97,9 +98,9 @@
             <div class="text-left d-block">
               <p>{{product.omschrijven}}</p>
             </div>
-            <div class="d-block">
+            <!-- <div class="d-block">
               <h2>{{product.category}}</h2>
-            </div>
+            </div> -->
           </div>
           <div class="col text-center">
             <button class="btn btn-warning d-inline shadow" (click)="ins(product)"><i class="fas fa-plus"></i></button>
@@ -141,16 +142,16 @@
 </div>
 
 
-<input type="text" [(ngModel)]='searchValue2' />
+<!-- <input type="text" [(ngModel)]='searchValue' /> -->
 
 <div class="row">
-  <div class="col">
-     <input type="text" [(ngModel)]='listFilter'/>
+  <div class="col-6">
   </div>
 </div>
-<div class="container" *ngFor="let restaurant of restaurants | searchfilter:searchValue2;">
+<div class="container" >
+  <input type="text" [(ngModel)]='listFilter'/>
 
-  <div class="row"  *ngFor="let cat of restaurant.cat ">
+  <div class="row"  >
     <div class="col">
       <table class="table table-striped">
         <thead>
@@ -161,13 +162,12 @@
             <th scope="col">Image</th>
           </tr>
         </thead>
-        <tbody >
-          <tr *ngFor="let product of cat.producten ">
+        <tbody>
+          <tr *ngFor="let product of filteredProducts">
             <td >{{product.name}}</td>
             <td >{{product.prijs}}</td>
             <td >{{product.category}}</td>
             <td >{{product.productImageUrl}}</td>
-
           </tr>
         </tbody>
       </table>

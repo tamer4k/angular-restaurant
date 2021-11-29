@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { empty } from 'rxjs';
+import { __values } from 'tslib';
 import restaurantData from '../restaurants.json';
 import { AuthService } from '../shared/auth.service';
 // import { CartService } from '../shared/cart.service';
 declare let toastr: any
 interface Restaurant {
-  id: Number
-  restaurantName: String
+  id?: Number
+  restaurantName?: String
   starRating: Number
   categories: String
   tijdBezorgd: Number
@@ -16,7 +18,7 @@ interface Restaurant {
   favoriet: boolean
   contact?: Contact[]
   openingstijden?: Openingstijden[]
-  cat: Cat[]
+  producten: Producten[]
 
 }
 
@@ -37,13 +39,8 @@ export interface Openingstijden {
   vrijdag?: string
 }
 
-export interface Cat {
-  catName?: string
-  producten: Producten[]
-}
-
 export interface Producten {
-  id?: number
+  id: number
   name?: string
   prijs?: number
   qnt?: number
@@ -61,11 +58,10 @@ export interface Producten {
 
 
 export class RestaurantDetailComponent implements OnInit {
-   searchValue2?: any;
+  searchValue?: any;
   restaurant!: Restaurant;
 
-  filteredCategories: Restaurant[] = [];
-  restaurants: Restaurant[] = restaurantData;
+  filteredProducts: Producten[] = [];
 
 
 
@@ -74,8 +70,6 @@ export class RestaurantDetailComponent implements OnInit {
     private auth: AuthService
   ) {
 
-    this.filteredCategories = this.restaurants;
-    this._listFilter= 'foo-bar';
   }
   private _listFilter: string = '';
   get listFilter(): string {
@@ -84,13 +78,14 @@ export class RestaurantDetailComponent implements OnInit {
   set listFilter(value: string) {
     this._listFilter = value;
     //  this.filteredCategories = this.categoriesFilter(value);
-    this.filteredCategories = this._listFilter? this.categoriesFilter(this._listFilter) : this.restaurants;
-
+     this.filteredProducts = this._listFilter? this.productCategoriesFilter(this._listFilter) : this.restaurant.producten;
   }
-  categoriesFilter(filterBy: string): Restaurant[] {
+  productCategoriesFilter(filterBy: string): Producten[] {
+//als filterby waarde heeft (bijvoorbeeld lunch) ga dan producten filteren obv category
     filterBy = filterBy.toLocaleLowerCase();
-    return this.restaurants.filter((cat: Restaurant) =>
-    cat.categories.toLocaleLowerCase().includes(filterBy));
+    return this.restaurant.producten.filter((product: Producten) =>
+    product.category?.toLocaleLowerCase().includes(filterBy));
+
   }
 //   performFilter(filterBy: string): any[] {
 //     filterBy = filterBy.toLocaleLowerCase();
@@ -102,7 +97,6 @@ export class RestaurantDetailComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.restaurant = restaurantData.find(r => r.id == id) ?? <Restaurant>{};
     this.cartItemFunc();
-    this.filteredCategories = this.restaurants;
     this.listFilter = '';
   }
   onBack(): void {
@@ -172,7 +166,7 @@ export class RestaurantDetailComponent implements OnInit {
     this.listFilter = '';
   }
   CategoryValue(): void {
-    this.listFilter = 'Greek';
+    this.listFilter = '';
   }
 
 }

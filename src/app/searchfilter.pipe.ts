@@ -16,7 +16,7 @@ interface Restaurant {
   favoriet: boolean
   contact?: Contact[]
   openingstijden?: Openingstijden[]
-  cat?: Cat[]
+  producten: Producten[]
 
 }
 
@@ -37,19 +37,15 @@ export interface Openingstijden {
   vrijdag?: string
 }
 
-export interface Cat {
-  catName?: string
-  producten?: Producten[]
-}
 
 export interface Producten {
-  id?: number
-  name?: string
-  prijs?: number
-  qnt?: number
-  productImageUrl?: string
-  omschrijven?: string
-  category?: string
+  id: number
+  name: string
+  prijs: number
+  qnt: number
+  productImageUrl: string
+  omschrijven: string
+  category: string
 }
 @Pipe({
   name: 'searchfilter'
@@ -73,3 +69,18 @@ export class SearchfilterPipe implements PipeTransform {
   }
 
 }
+
+// export class SearchfilterPipe implements PipeTransform {
+
+//   transform(Productens: Producten[], searchValue: string): Producten[] {
+//     if (!Productens || ! searchValue){
+//       return Productens;
+//     }
+
+//     return Productens.filter(cat =>
+//       cat.category.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+//       );
+
+//   }
+
+// }

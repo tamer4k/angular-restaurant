@@ -54,7 +54,7 @@ export interface Producten {
 @Pipe({
   name: 'searchfilter2'
 })
-export class SearchfilterPipe implements PipeTransform {
+export class Searchfilter2Pipe implements PipeTransform {
 
   transform(Productens: Producten[], searchValue2: string): Producten[] {
     if (!Productens || ! searchValue2){

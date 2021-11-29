@@ -39,8 +39,12 @@
             </div>
           </h3>
           <div class="card-text text-center pb-4">
-            <p class="card-categories text-center text-info p-2" *ngFor="let cat of restaurant.cat; let last = last;">
-              <span *ngIf="cat.catName"> {{cat.catName}}<span *ngIf="!last">{{komma}}</span></span>
+            <!-- <p class="card-categories text-center text-info p-2" *ngFor="let cat of restaurant; let last = last;"> -->
+              <p class="card-categories text-center text-info p-2">
+
+              <!-- <span *ngIf="cat.catName"> {{cat.catName}}<span *ngIf="!last">{{komma}}</span></span> -->
+              <span *ngIf="restaurant.categories"> {{restaurant.categories}}</span>
+
             </p>
           </div>
           <p class="card-text">
