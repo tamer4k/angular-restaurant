@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
-
+import {  AfterViewInit } from '@angular/core';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -25,21 +25,18 @@ export class MapComponent implements OnInit {
 
     // create 5 random jitteries and add them to map
     const jittery = Array(5).fill(this.centroid).map(
-        x => [x[0] + (Math.random() - .5)/10, x[1] + (Math.random() - .5)/10 ]
-      ).map(
-        x => L.marker(x as L.LatLngExpression)
-      ).forEach(
-        x => x.addTo(map)
-      );
-
+      x => [x[0] + (Math.random() - .5) / 10, x[1] + (Math.random() - .5) / 10]
+    ).map(
+      x => L.marker(x as L.LatLngExpression)
+    ).forEach(
+      x => x.addTo(map)
+    );
     tiles.addTo(map);
-
   }
-
   constructor() { }
+    ngAfterViewInit(): void { }
 
   ngOnInit(): void {
     this.initMap();
   }
-
 }

@@ -16,31 +16,23 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { MapComponent } from './map/map.component';
 import { RestaurantDetailComponent } from './restaurant/restaurant-detail.component';
-import { RestaurantDetailGuard } from './restaurant/restaurant-detail.guard';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
-import { RestaurantService } from './shared/restauant-service';
-import {appRoutes} from './routing';
+import { appRoutes } from './routing';
 import { RouterModule, Routes } from '@angular/router';
-import { Error404Component } from './errors/404.component';
 import { CartComponent } from './cart/cart.component';
 import { KassabonComponent } from './kassabon/kassabon.component';
-import { TestComponent } from './test/test.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
 import { NgxPrintModule } from 'ngx-print';
-// import {MatProgressBarModule} from '@angular/material/progress-bar';
-// import { MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { GooglemapComponent } from './googlemap/googlemap.component';
-// import { MapComponent } from './map/map.component';
 import { RatingModule } from 'ng-starrating';
 import { registerLocaleData } from '@angular/common';
-import localeFr from '@angular/common/locales/nl';
-registerLocaleData(localeFr, 'nl');
+import localeNl from '@angular/common/locales/nl';
+registerLocaleData(localeNl, 'nl');
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,15 +43,12 @@ registerLocaleData(localeFr, 'nl');
     MapComponent,
     RestaurantDetailComponent,
     FooterComponent,
-    Error404Component,
     CartComponent,
     KassabonComponent,
-    TestComponent,
     SearchfilterPipe,
-    GooglemapComponent,
   ],
   imports: [
-    RouterModule.forRoot(appRoutes,{ enableTracing: true }),
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
@@ -79,19 +68,13 @@ registerLocaleData(localeFr, 'nl');
     NgxPrintModule,
     NgxSpinnerModule,
     RatingModule
-
   ],
-  providers: [RestaurantService,
+  providers: [
     {
-    provide: LOCALE_ID,
-    useValue: 'nl-NL'
-  },
-],
-
-  // providers: [
-
-  //   RestaurantService
-  // ],
+      provide: LOCALE_ID,
+      useValue: 'nl-NL'
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,7 +5,6 @@
     </div>
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col ">
@@ -23,7 +22,6 @@
     </div>
   </div>
 </div>
-
 <div class="container">
   <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 row-cols-sm-1">
     <div *ngFor="let restaurant of filteredRestaurants | searchfilter:searchValue;">
@@ -60,12 +58,10 @@
             bezorgd kosten
           </p>
           <div class="card-text">
-            <star-rating [value] ="restaurant.starRating.valueOf()" [totalstars]="5" checkedcolor="#ff7300" uncheckedcolor="#16161680" size="24px" [readonly]="false" (rate)="onRate($event)"></star-rating>
+            <star-rating [value]="restaurant.starRating.valueOf()" [totalstars]="5" checkedcolor="#ff7300"
+              uncheckedcolor="#16161680" size="24px" [readonly]="false" (rate)="onRate($event)"></star-rating>
             <pre><b>{{ restaurant.starRating }}</b>(2132)</pre>
           </div>
-          <!------------------------------------------------------------->
-
-          <!------------------------------------------------------------->
           <a class=" btn btn-warning btn-block text-dark" mat-list-item href="#"
             routerLink="/restaurants/{{restaurant.id}}" routerLinkActive="active">Bestellen</a>
         </div>

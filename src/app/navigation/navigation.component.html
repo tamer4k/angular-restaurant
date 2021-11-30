@@ -3,17 +3,21 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar class="Snel-title">
       <h1 class="">
-        Snel bezorgd
+        AlkmaarBezorgd
       </h1>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#" routerLink="/cart" routerLinkActive="active"> <i class="amount fa fa-shopping-cart text-warning pl-3 mb-1 fa-1x"></i><h5 class="cart_value text-white bg-danger rounded-circle p-1 mb-5 ml-n2 pl-2 pr-2 ">{{amount}}</h5>Cart</a>
-
-      <a mat-list-item href="#" routerLink="/home" routerLinkActive="active"><i class="fas fa-home text-warning pl-3 mb-1 fa-1x pr-2"></i>Home</a>
-      <a mat-list-item href="#" routerLink="/restaurants" routerLinkActive="active"><i class="fas fa-utensils text-warning pl-3 mb-1 fa-1x pr-2"></i>Alle restaurants</a>
-      <a mat-list-item href="#" routerLink="/contact" routerLinkActive="active"><i class="fas fa-id-card text-warning pl-3 mb-1 fa-1x pr-2"></i> Contact</a>
+      <a mat-list-item href="#" routerLink="/cart" routerLinkActive="active"> <i
+          class="amount fa fa-shopping-cart text-warning pl-3 mb-1 fa-1x"></i>
+        <h5 class="cart_value text-white bg-danger rounded-circle p-1 mb-5 ml-n2 pl-2 pr-2 ">{{amount}}</h5>Cart
+      </a>
+      <a mat-list-item href="#" routerLink="/home" routerLinkActive="active"><i
+          class="fas fa-home text-warning pl-3 mb-1 fa-1x pr-2"></i>Home</a>
+      <a mat-list-item href="#" routerLink="/restaurants" routerLinkActive="active"><i
+          class="fas fa-utensils text-warning pl-3 mb-1 fa-1x pr-2"></i>Alle restaurants</a>
+      <a mat-list-item href="#" routerLink="/contact" routerLinkActive="active"><i
+          class="fas fa-id-card text-warning pl-3 mb-1 fa-1x pr-2"></i> Contact</a>
       <!-- <a mat-list-item href="#" routerLink="/map" routerLinkActive="active"><i class="fas fa-id-card text-warning pl-3 mb-1 fa-1x pr-2"></i> Map</a> -->
-
     </mat-nav-list>
   </mat-sidenav>
   <mat-card-header>
@@ -25,19 +29,15 @@
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
           <img src="assets/R.png" class="text-center" height="75" alt="CoolBrand">
-          <h1 class="logo">SnelBezorgd</h1>
+          <h1 class="logo">AlkmaarBezorgd</h1>
         </mat-toolbar>
         <img src="assets/header.jpg" class="img-fluid" alt="...">
       </div>
     </div>
   </mat-card-header>
   <mat-card-content>
-
     <!-- Add Content Here -->
-    <router-outlet>
-
-     
-    </router-outlet>
+    <router-outlet></router-outlet>
   </mat-card-content>
   <mat-grid-tile-footer>
     <app-footer></app-footer>

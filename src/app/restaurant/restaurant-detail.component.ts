@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { StarRatingComponent } from 'ng-starrating';
 import restaurantData from '../restaurants.json';
 import { AuthService } from '../shared/auth.service';
-// import { CartService } from '../shared/cart.service';
-declare let toastr: any
 interface Restaurant {
   id: Number
   restaurantName: String
@@ -17,16 +16,13 @@ interface Restaurant {
   contact?: Contact[]
   openingstijden?: Openingstijden[]
   cat: Cat[]
-
 }
-
 export interface Contact {
   email?: string
   phone?: number
   postcode?: string
   straat?: string
 }
-
 export interface Openingstijden {
   zaterdag?: string,
   zondag?: string,
@@ -36,12 +32,10 @@ export interface Openingstijden {
   donderdag?: string,
   vrijdag?: string
 }
-
 export interface Cat {
   catName?: string
   producten: Producten[]
 }
-
 export interface Producten {
   id?: number
   name?: string
@@ -51,55 +45,36 @@ export interface Producten {
   omschrijven?: string
   category?: string
 }
-
 @Component({
   selector: 'app-restaurant-detail',
   templateUrl: './restaurant-detail.component.html',
   styleUrls: ['./restaurant-detail.component.css']
 })
-
-
-
 export class RestaurantDetailComponent implements OnInit {
-   searchValue2?: any;
   restaurant!: Restaurant;
-
   filteredCategories: Cat[] = [];
-  // restaurants: Cat[] = restaurantData;
-
-
-
   constructor(private route: ActivatedRoute,
     private router: Router,
     private auth: AuthService
   ) {
-}
+  }
   private _listFilter: string = '';
   get listFilter(): string {
     return this._listFilter;
   }
   set listFilter(value: string) {
     this._listFilter = value;
-    //  this.filteredCategories = this.categoriesFilter(value);
-    this.filteredCategories = this._listFilter? this.categoriesFilter(this._listFilter) : this.restaurant.cat;
-
+    this.filteredCategories = this._listFilter ? this.categoriesFilter(this._listFilter) : this.restaurant.cat;
   }
   categoriesFilter(filterBy: string): Cat[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.restaurant.cat.filter((cat: Cat) =>
-    cat.catName?.toLocaleLowerCase().includes(filterBy));
+      cat.catName?.toLocaleLowerCase().includes(filterBy));
   }
-//   performFilter(filterBy: string): any[] {
-//     filterBy = filterBy.toLocaleLowerCase();
-//     return this.products.filter((product: any) =>
-//         product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
-// }
-
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.restaurant = restaurantData.find(r => r.id == id) ?? <Restaurant>{};
     this.cartItemFunc();
-    // this.filteredCategories = this.restaurants;
     this.listFilter = '';
   }
   onBack(): void {
@@ -119,7 +94,6 @@ export class RestaurantDetailComponent implements OnInit {
     this.cartNumber = cartValue.length;
     this.auth.cartSubject.next(this.cartNumber);
   }
-
   itemsCart: any = [];
   addtocart(category: any) {
     let cartDataNull = localStorage.getItem('localCart');
@@ -147,14 +121,10 @@ export class RestaurantDetailComponent implements OnInit {
       else {
         localStorage.setItem('localCart', JSON.stringify(this.itemsCart));
       }
-
     }
     this.cartNumberFunc();
     this.cartItemFunc();
-    // localStorage.setItem('localCart', JSON.stringify(category));
   }
-
-
   ins(product: any) {
     if (product.qnt != 10)
       product.qnt += 1;
@@ -163,13 +133,13 @@ export class RestaurantDetailComponent implements OnInit {
     if (product.qnt != 1)
       product.qnt -= 1;
   }
-
-
   allValue(): void {
     this.listFilter = '';
   }
-  CategoryValue(value :any): void {
+  CategoryValue(value: any): void {
     this.listFilter = value;
   }
-
+  starRating = 2
+  public onRate($event: { oldValue: number, newValue: number, starRating: StarRatingComponent }) {
+  }
 }

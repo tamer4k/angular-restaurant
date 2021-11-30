@@ -30,8 +30,6 @@ export interface Producten {
   productImageUrl?: string
   omschrijven?: string
 }
-
-
 @Component({
   selector: 'app-kassabon',
   templateUrl: './kassabon.component.html',

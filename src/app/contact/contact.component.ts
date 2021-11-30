@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { GooglemapComponent } from '../googlemap/googlemap.component';
 
 @Component({
   selector: 'app-contact',

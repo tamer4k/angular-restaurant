@@ -1,18 +1,9 @@
-// import { state } from '@angular/animations';
-// import { DeclarationListEmitMode } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
-import { getValueInRange } from '@ng-bootstrap/ng-bootstrap/util/util';
-import { getConstantValue } from 'typescript';
-// import { Route } from '@angular/router';
 import restaurantData from '../restaurants.json';
 import { StarRatingComponent } from 'ng-starrating';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ExpressionBinding } from '@angular/compiler';
-/**/
 
-/* */
-declare let toastr: any
+
 interface Restaurant {
   id: Number
   restaurantName: String
@@ -26,32 +17,26 @@ interface Restaurant {
   cat?: Cat[]
 
 }
-
 export interface Cat {
   catName: string
   producten: Producten[]
 }
-
 export interface Producten {
   id: number
   name: string
 }
-
-
 @Component({
   selector: 'app-restaurant',
   templateUrl: './restaurant.component.html',
   styleUrls: ['./restaurant.component.css'],
 
 })
-
 export class RestaurantComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     private router: Router,) {
 
   }
-
   public restaurantElements: Array<Restaurant> = [];
   searchValue?: any;
   komma = ","
@@ -65,36 +50,17 @@ export class RestaurantComponent implements OnInit {
     this._listFilter = value;
     this.filteredRestaurants = this.categoriesFilter(value);
   }
-
   categoriesFilter(filterBy: string): Restaurant[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.restaurants.filter((restaurant: Restaurant) =>
       restaurant.categories.toLocaleLowerCase().includes(filterBy));
   }
-
-
-
   ngOnInit(): void {
     setTimeout(() => {
-
       this.filteredRestaurants = this.restaurants;
       this.listFilter = '';
     }, -2000);
   }
-
-public valrating : number[] = [];
-
-// selecteets(){
-//   const res = restaurantData;
-//   for(let i = 0; i < res.length; i++){
-//     let eenresturants = res[i].starRating;
-//     let newrating = this.valrating.push(eenresturants);
-
-
-//     console.log(newrating);
-//     return newrating;
-//   }
-// }
   filterFavoriet(): Restaurant[] {
     return this.restaurants.filter((restaurant: Restaurant) => restaurant.favoriet === true);
   }
@@ -114,12 +80,8 @@ public valrating : number[] = [];
     this.filteredRestaurants = this.filterFavoriet();
 
   }
-starRating = 2
-// public valuestart = this.selecteets();
+  starRating = 2
   public onRate($event: { oldValue: number, newValue: number, starRating: StarRatingComponent }) {
-    // alert(`${$event.oldValue},${$event.newValue}`);
-
-    // this.valuestart;
   }
 }
 

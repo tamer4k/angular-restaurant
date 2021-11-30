@@ -7,14 +7,11 @@
   <div class="row border border-info m-2 rounded p-2">
     <div class="col text-center">
       <img [src]="restaurant.restaurantImageUrl" class="rounded-circle" style="height: 150px;" alt="...">
-
       <div class="row align-items-center  ">
-        <div class="col text-left text-dark p-3">
-          <h2>{{ restaurant.starRating }}</h2>
-          <i class="fas fa-star fa-2x"></i>
-          <i class="fas fa-star fa-2x"></i>
-          <i class="fas fa-star fa-2x"></i>
-          <i class="fas fa-star fa-2x"></i>
+        <div class="col text-left p-3">
+          <star-rating [value]="restaurant.starRating.valueOf()" [totalstars]="5" checkedcolor="#ff7300"
+            uncheckedcolor="#16161680" size="35px" [readonly]="false" (rate)="onRate($event)"></star-rating>
+          <pre><b>{{ restaurant.starRating }}</b>(2132)</pre>
         </div>
         <div class="col text-center p-3">
           <h1>{{restaurant.restaurantName}}</h1>
@@ -36,59 +33,25 @@
     </div>
   </div>
 </div>
-
-<!-- <ngb-accordion  class="container"[closeOthers]="true">
-  <ngb-panel title="{{cat.catName}}"  *ngFor="let cat of restaurant.cat">
-    <ng-template ngbPanelContent>
-      <div class="row mt-3" *ngFor="let product of cat.producten ">
-               <div class="col-2 mb-3  text-center">
-            <img [src]="product.productImageUrl" class="imgA rounded-circle w-50" alt="Image">
-          </div>
-          <div class="menu-textA col text-center">
-            <h3 class="text-left">{{product.name}}<strong class="d-inline text-secondary">€{{product.prijs}}</strong></h3>
-            <div class="text-left d-block bg-light">
-              <p>{{product.omschrijven}}</p>
-            </div>
-          </div>
-          <div class="col text-center">
-            <button class="btn btn-warning d-inline" (click)="ins(product)"><i class="fas fa-plus"></i></button>
-            <p class="p-3  d-inline">{{product.qnt}}</p>
-            <button class="btn btn-warning d-inline" (click)="dec(product)"><i class="fas fa-minus"></i></button>
-            <input class="btn btn-warning p-2 ml-3" type="button" (click)="addtocart(product)" value="toevoegen" />
-          </div>
-      </div>
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion> -->
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col ">
-      <input type="text" [(ngModel)]='listFilter'/>
-    </div>
-  </div>
-</div> -->
-
-<div class="container-fluid" >
+<div class="container-fluid">
   <div class="row menu border border-info m-2 rounded p-2 ">
     <div class="col-9 font-weight-bold">
       <div class="row">
         <div class="col">
-           <input  type="text" [(ngModel)]='listFilter' hidden/>
+          <input type="text" [(ngModel)]='listFilter' hidden />
         </div>
       </div>
       <div class="row ">
         <button class="btn btn-outline-dark m-2" (click)='allValue()'>Alle</button>
         <div class="col " *ngFor="let cat of restaurant.cat ">
-          <button class="btn btn-outline-dark m-2 " value="CategoryValue()"  (click)='CategoryValue(cat.catName)'>{{cat.catName}}</button>
+          <button class="btn btn-outline-dark m-2 " value="CategoryValue()"
+            (click)='CategoryValue(cat.catName)'>{{cat.catName}}</button>
         </div>
       </div>
-
       <div class="menu-tab   border-0 border-secondary-25 m-2 rounded  shadow-sm  p-3 mb-5 bg-body rounded"
         *ngFor="let cat of filteredCategories">
         <div class="row align-middle">
           <div class="col text-secondary p-2 text-center font-weight-bold">
-
             <h2>{{cat.catName}}</h2>
           </div>
         </div>
@@ -109,13 +72,9 @@
             <input class="btn btn-warning p-2 ml-3 shadow  " type="button" (click)="addtocart(product)"
               value="toevoegen" />
           </div>
-          <!-- <div class="col text-center mb-3">
-            <img class="rounded w-75 border-secondary" [src]="cat.sideImageUrl" alt="Image">
-          </div> -->
         </div>
       </div>
     </div>
-
     <!-- Sidebare -->
     <div class="col border border-secondary-50 rounded p-2">
       <div class="text-left text-dark ml-3 p-3" *ngFor="let open of restaurant.openingstijden">
@@ -128,7 +87,6 @@
         <p><i class="fas fa-store-alt text-success p-1"></i> Zaterdag: {{open.zaterdag}}</p>
         <p><i class="fas fa-store-alt-slash text-danger p-1" text-danger></i> Zondag: {{open.zondag}}</p>
       </div>
-
       <div class="text-left text-dark ml-3 p-3" *ngFor="let contact of restaurant.contact">
         <h1>Contact</h1>
         <p><i class="fas fa-envelope text-primary"></i> Email: {{contact.email}}</p>
@@ -140,5 +98,3 @@
     </div>
   </div>
 </div>
-
-
