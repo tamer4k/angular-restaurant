@@ -52,7 +52,7 @@ export interface Producten {
 })
 export class RestaurantDetailComponent implements OnInit {
   restaurant!: Restaurant;
-  filteredCategories: Cat[] = [];
+  filteredProductCategories: Cat[] = [];
   constructor(private route: ActivatedRoute,
     private router: Router,
     private auth: AuthService
@@ -64,9 +64,9 @@ export class RestaurantDetailComponent implements OnInit {
   }
   set listFilter(value: string) {
     this._listFilter = value;
-    this.filteredCategories = this._listFilter ? this.categoriesFilter(this._listFilter) : this.restaurant.cat;
+    this.filteredProductCategories = this._listFilter ? this.productCategoriesFilter(this._listFilter) : this.restaurant.cat;
   }
-  categoriesFilter(filterBy: string): Cat[] {
+  productCategoriesFilter(filterBy: string): Cat[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.restaurant.cat.filter((cat: Cat) =>
       cat.catName?.toLocaleLowerCase().includes(filterBy));
