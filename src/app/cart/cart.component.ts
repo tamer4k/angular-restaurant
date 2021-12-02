@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import restaurantData from '../restaurants.json';
-import{AuthService} from '../shared/auth.service';
+import { AuthService } from '../shared/auth.service';
 
 
 interface Restaurant {
@@ -39,8 +39,8 @@ export interface Producten {
 })
 export class CartComponent implements OnInit {
   restaurant!: Restaurant;
-  promotiecodes : number = 10;
-  constructor(private auth:AuthService,private route: ActivatedRoute, private router: Router,) { }
+  promotiecodes: number = 10;
+  constructor(private auth: AuthService, private route: ActivatedRoute, private router: Router,) { }
 
   ngOnInit(): void {
 
@@ -52,7 +52,7 @@ export class CartComponent implements OnInit {
 
   cartNumber: number = 0;
   cartNumberFunc() {
-    var cartValue = JSON.parse(localStorage.getItem('localCart') !);
+    var cartValue = JSON.parse(localStorage.getItem('localCart')!);
     this.cartNumber = cartValue.length;
     this.auth.cartSubject.next(this.cartNumber);
   }
@@ -86,23 +86,23 @@ export class CartComponent implements OnInit {
   }
   totaal: number = 0;
   BezorgdKosten: number = 0;
+  btw: number = 0;
 
   loadCart() {
     if (localStorage.getItem('localCart')) {
       this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '');
-      this.totaal = this.getCartDetails.reduce(function (acc: number, val: { prijs: number; qnt: number; })  {
+      this.totaal = this.getCartDetails.reduce(function (acc: number, val: { prijs: number; qnt: number; }) {
         return acc + (val.prijs * val.qnt);
       }, 0);
+      this.btw = this.totaal / 100 * 9;
+
     }
-    if(this.totaal >= 35 || this.getCartDetails == 0){
+    if (this.totaal >= 35 || this.getCartDetails == 0) {
       this.BezorgdKosten = 0;
-     } else{
+    } else {
       this.BezorgdKosten = 5;
     }
 
-  }
-  MyLog(mylog: any){
-   console.log(mylog);
   }
   removeAll() {
     localStorage.removeItem('localCart');

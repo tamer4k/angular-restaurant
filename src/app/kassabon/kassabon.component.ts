@@ -57,12 +57,15 @@ export class KassabonComponent implements OnInit {
   }
   totaal: number = 0;
   BezorgdKosten: number = 0;
+  btw: number=0;
+
   loadCart() {
     if (localStorage.getItem('localCart')) {
       this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '');
       this.totaal = this.getCartDetails.reduce(function (acc: number, val: { prijs: number; qnt: number; }) {
         return acc + (val.prijs * val.qnt);
       }, 0);
+      this.btw  = this.totaal / 100 * 9;
     }
     if (this.totaal >= 35 || this.getCartDetails == 0) {
       this.BezorgdKosten = 0;

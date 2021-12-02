@@ -55,15 +55,19 @@
           </div>
           <div class="d-flex flex-row-reverse bg-dark text-white p-4">
             <div class="py-3 px-5 text-right">
-              <div class="mb-2">Totaal incl BK</div>
-              <div class="h2 font-weight-light">{{totaal + BezorgdKosten | currency:'EUR':'symbol':'1.2-2':'nl'}}</div>
+              <div class="mb-2">Totaal incl BTW</div>
+              <div class="h2 font-weight-light">{{totaal + btw | currency:'EUR':'symbol':'1.2-2':'nl'}}</div>
             </div>
             <div class="py-3 px-5 text-right">
-              <div class="mb-2">korting</div>
-              <div class="h2 font-weight-light">0</div>
+              <div class="mb-2">Total</div>
+              <div class="h2 font-weight-light">{{totaal | currency:'EUR':'symbol':'1.2-2':'nl'}}</div>
             </div>
             <div class="py-3 px-5 text-right">
-              <div class="mb-2">Bezor Kosten</div>
+              <div class="mb-2">BTW</div>
+              <div class="h2 font-weight-light">{{btw | currency:'EUR':'symbol':'1.2-2':'nl'}}</div>
+            </div>
+            <div class="py-3 px-5 text-right">
+              <div class="mb-2">Bezorg Kosten</div>
               <div class="h2 font-weight-light">{{BezorgdKosten | currency:'EUR':'symbol':'1.2-2':'nl'}}</div>
             </div>
           </div>
