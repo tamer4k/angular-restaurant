@@ -57,10 +57,10 @@
   </div>
   <div class="row ">
     <div class="col p-2 text-secondary">
-      <p class="text-dark-50 font-weight-bold border border-1 p-2 border-warning rounded">Bestel je voor €35 of meer? Dan is de bezorging gratis!</p>
+      <p class="text-warning font-weight-bold border border-1 p-2 border-secondary-50 rounded">Bestel je voor €35 of meer? Dan is de bezorging gratis!</p>
       <h3 class="text-dark-50 font-weight-bold">Bezorgkosten <span class="text-warning">{{BezorgdKosten | currency:'EUR':'symbol':'1.2-2':'nl'}} </span></h3>
-      <h3 class="text-dark-50 font-weight-bold">BTW <span class="text-warning">{{btw | currency:'EUR':'symbol':'1.2-2':'nl'}}</span> </h3>
-      <h3 class="text-dark-50 font-weight-bold">Totaal inclu bezorging en BTW <span class="text-warning">{{totaal + btw + BezorgdKosten | currency:'EUR':'symbol':'1.2-2':'nl'}} </span></h3>
+      <h3 class="text-dark-50 font-weight-bold">Btw <span class="text-warning">{{btw | currency:'EUR':'symbol':'1.2-2':'nl'}}</span> </h3>
+      <h3 class="text-dark-50 font-weight-bold">Totaal inclu bezorging en btw <span class="text-warning">{{totaal + btw + BezorgdKosten | currency:'EUR':'symbol':'1.2-2':'nl'}} </span></h3>
 
     </div>
     <div class="col">
