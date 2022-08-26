@@ -32,6 +32,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { RatingModule } from 'ng-starrating';
 import { registerLocaleData } from '@angular/common';
 import localeNl from '@angular/common/locales/nl';
+import { InlogComponent } from './inlog/inlog.component';
 registerLocaleData(localeNl, 'nl');
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ registerLocaleData(localeNl, 'nl');
     CartComponent,
     KassabonComponent,
     SearchfilterPipe,
+    InlogComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { enableTracing: true }),

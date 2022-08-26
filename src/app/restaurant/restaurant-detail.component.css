@@ -234,6 +234,12 @@
   float: left;
   display: block;
 }
+.toevoegen.active,
+.toevoegen:active{
+   color: #719a0a !important;
+   background-color: #719a0a !important;
+}
+
 @media(max-width: 575.98px) {
   .menu .menu-text p,
   .menu .menu-text h3,

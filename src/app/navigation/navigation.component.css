@@ -97,7 +97,6 @@ body {
 .mat-list-item:active{
   border-left: solid 6px #ff7c00 !important;
   background-color: #ececec;
-
 }
 .mat-list-base {
   padding-top: 0px;
